@@ -1859,7 +1859,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		background: url('../images/header-background.jpg') center center no-repeat;
+		background: url('../images/_header-background.jpg') center center no-repeat;
 		background-size: cover;
 	}
 
@@ -1991,7 +1991,7 @@ a:hover.back-to-top {
 
 	/* Extra Pages */
 	.ex-header {
-		background: url('../images/ex-header-background.jpg') center center no-repeat;
+		background: url('../images/_ex-header-background.jpg') center center no-repeat;
 		background-size: cover;
 	}
 
