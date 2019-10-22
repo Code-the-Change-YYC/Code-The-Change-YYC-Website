@@ -4,6 +4,17 @@
    Description: Custom JS file
 */
 
+// Partner With Us Form
+$(document).on('submit', '#partner-form', function (event) {
+  let thankYou = $(".thank-you");
+  thankYou.show();
+  thankYou.fadeOut(15000);
+  $("#partner-form")[0].reset();
+ return window.submitGoogleForm(this, function() {
+    $("#partner-form")[0].reset();
+  });
+});
+
 
 (function($) {
     "use strict"; 
