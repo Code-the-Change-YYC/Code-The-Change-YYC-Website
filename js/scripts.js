@@ -10,9 +10,6 @@ $(document).on('submit', '#partner-form', function (event) {
   thankYou.show();
   thankYou.fadeOut(15000);
   $("#partner-form")[0].reset();
- return window.submitGoogleForm(this, function() {
-    $("#partner-form")[0].reset();
-  });
 });
 
 
