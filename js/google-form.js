@@ -10,7 +10,11 @@
       }).join('&');
       var xhr = new XMLHttpRequest();
 
-      xhr.open('POST', form.action + '/formResponse', false);
+      /*
+       this last 'false' parameter in the open method tells it to make a synchronous request,
+       which helped to avoid timing issues with the redirect to the thankyou page.
+      */
+      xhr.open('POST', form.action + '/formResponse', false); 
       xhr.setRequestHeader('Accept',
           'application/xml, text/xml, */*; q=0.01');
       xhr.setRequestHeader('Content-type',
