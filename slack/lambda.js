@@ -12,7 +12,7 @@ exports.handler = function(event, context) {
     };
 
    var revision = event["CodePipeline.job"].data.inputArtifacts[0].revision;
-   var url = "https://github.com/codethechangeyyc/website/commit/" + revision;
+   var url = “https://github.com/ckthiessen/code-the-change-yyc-website/commit/” + revision;
    var message = "Check out the changeset at " + url;
     var severity = "good";
 
