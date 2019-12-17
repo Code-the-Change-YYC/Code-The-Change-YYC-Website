@@ -823,7 +823,9 @@ input[type='checkbox'] {
 	border: 1px solid #c4d8dc;
 	border-radius: 0.5rem;
 	background: transparent;
-	width: 25%;
+	width: 17rem;
+	height: 15rem;
+	margin-bottom: 2em;
 }
 
 .cards-1 .card-image {
@@ -1876,7 +1878,7 @@ a:hover.back-to-top {
 
 	/* Services */
 	.cards-1 .card {
-		display: inline-block;
+		display: inline-flex;
 		max-width: 17.125rem;
 		vertical-align: top;
 	}
@@ -1887,6 +1889,9 @@ a:hover.back-to-top {
 	}
 	/* end of services */
 
+	.card a {
+		margin: auto;
+	}
 
 	/* Details 1 */
 	.basic-1 .text-container {
