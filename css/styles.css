@@ -816,15 +816,14 @@ input[type='checkbox'] {
 }
 
 .cards-1 .card {
-	max-width: 21rem;
-  height: 18rem;
+	height: 100%;
 	margin-right: auto;
-	margin-bottom: 4.5rem;
 	margin-left: auto;
-	padding: 3.25rem 2rem 2rem 2rem;
+	padding: 2rem 2rem 2rem 2rem;
 	border: 1px solid #c4d8dc;
 	border-radius: 0.5rem;
 	background: transparent;
+	width: 25%;
 }
 
 .cards-1 .card-image {
@@ -841,7 +840,6 @@ input[type='checkbox'] {
 .cards-1 .card-body {
 	padding: 0;
 }
-
 
 /*************************/
 /*     07. Details 1     */
