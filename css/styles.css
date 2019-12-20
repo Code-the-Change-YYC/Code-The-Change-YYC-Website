@@ -816,15 +816,15 @@ input[type='checkbox'] {
 }
 
 .cards-1 .card {
-	max-width: 21rem;
-  height: 18rem;
 	margin-right: auto;
-	margin-bottom: 4.5rem;
 	margin-left: auto;
-	padding: 3.25rem 2rem 2rem 2rem;
+	padding: 2rem 2rem 2rem 2rem;
 	border: 1px solid #c4d8dc;
 	border-radius: 0.5rem;
 	background: transparent;
+	width: 17rem;
+	height: 15rem;
+	margin-bottom: 2em;
 }
 
 .cards-1 .card-image {
@@ -841,7 +841,6 @@ input[type='checkbox'] {
 .cards-1 .card-body {
 	padding: 0;
 }
-
 
 /*************************/
 /*     07. Details 1     */
@@ -1878,7 +1877,7 @@ a:hover.back-to-top {
 
 	/* Services */
 	.cards-1 .card {
-		display: inline-block;
+		display: inline-flex;
 		max-width: 17.125rem;
 		vertical-align: top;
 	}
@@ -1889,6 +1888,9 @@ a:hover.back-to-top {
 	}
 	/* end of services */
 
+	.card a {
+		margin: auto;
+	}
 
 	/* Details 1 */
 	.basic-1 .text-container {
