@@ -671,6 +671,13 @@ input[type='checkbox'] {
 }
 
 /* Dropdown Menu */
+
+/*cjpg*/
+.dropdown-item.active {
+	background-color: #fff;
+}
+
+
 .navbar-custom .dropdown:hover > .dropdown-menu {
 	display: block; /* this makes the dropdown menu stay open while hovering it */
 	min-width: auto;
