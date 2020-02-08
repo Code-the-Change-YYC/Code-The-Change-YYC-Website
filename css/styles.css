@@ -673,6 +673,7 @@ input[type='checkbox'] {
 /* Dropdown Menu */
 
 /*cjpg*/
+.dropdown-item:active,
 .dropdown-item.active {
 	background-color: #fff;
 }
