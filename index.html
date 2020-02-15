@@ -57,10 +57,11 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="index.html#header">Home <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#students">Who is it for?</a>
+                    <a class="nav-link page-scroll" href="index.html#students">Who is it for?</a>
                 </li>
 
                 <!-- Details Dropdown Menu -->
@@ -71,17 +72,16 @@
                         <a class="dropdown-item" href="events.html"><span class="item-text">Events</span></a>
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="projects.html"><span class="item-text">Projects</span></a>
-                        <!-- <div class="dropdown-items-divide-hr"></div> -->
-                        <!-- <a class="dropdown-item" href="sponsors.html"><span class="item-text">Sponsors</span></a> -->
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="sponsors.html"><span class="item-text">Sponsors</span></a>
                     </div>
                 </li>
-
                 <!-- Registration Dropdown Menu -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#information" id="navbarDropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">Sign Up</a>
+                    <a class="nav-link dropdown-toggle page-scroll" href="#" id="navbarDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Sign Up</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item page-scroll" href="#applications"><span class="item-text">Member
+                        <a class="dropdown-item page-scroll" href="members.html"><span class="item-text">Member
                                 Registration</span></a>
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="causes.html"><span class="item-text">Cause
@@ -96,7 +96,6 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#contact">Contact</a>
                 </li>
-
             </ul>
         </div>
     </nav> <!-- end of navbar -->
@@ -113,9 +112,15 @@
                             <h1><span class="turquoise">Code The Change</span> <span class="red">YYC</span></h1>
                             <p class="p-large">Welcome to the Calgary chapter of Code The Change.
                             </p>
-                            <a class="btn-solid-lg page-scroll" href="#students">Students</a>
-                            <a class="btn-solid-lg page-scroll" href="#causes">Causes</a>
-                            <a class="btn-solid-lg page-scroll" href="#mentors">Mentors</a>
+                            <div class="d-flex">
+                                <div class="col-sm-auto">
+                                    <a class="btn-solid-lg page-scroll m-1" href="#students">Students</a>
+                                    <a class="btn-solid-lg page-scroll m-1" href="#causes">Causes</a>
+                                    <a class="btn-solid-lg page-scroll m-1" href="#mentors">Mentors</a>
+                                    <a class="btn-solid-lg page-scroll m-1" href="sponsors.html">Sponsors</a>
+                                </div>
+                            </div>
+
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -129,8 +134,8 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-    <!-- Applications promo -->
-    <div id="applications" class="cards-1">
+    <!-- Events promo -->
+    <div id="applications" class="cards-1 d-none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -176,7 +181,7 @@
 
                     <!-- Card -->
                     <div class="card">
-                        <a href="events.html">
+                        <a class="page-scroll" href="#about">
                             <img class="card-image" src="images/_uofc.png" alt="University of Calgary">
                         </a>
                     </div>
@@ -184,7 +189,7 @@
 
                     <!-- Card -->
                     <div class="card">
-                        <a href="projects.html">
+                        <a class="page-scroll" href="#about">
                             <img class="card-image" src="images/_mru.png" alt="Mount Royal University">
                         </a>
                     </div>
@@ -192,7 +197,7 @@
 
                     <!-- Card -->
                     <div class="card">
-                        <a href="causes.html">
+                        <a class="page-scroll" href="#about">
                             <img class="card-image" src="images/_sait.png"
                                 alt="Southern Alberta Institute of Technology">
                         </a>
@@ -485,7 +490,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>More Information</h2>
-                    <p class="p-heading p-large">Wanna know more about upcoming events, projects, or cause
+                    <p class="p-heading p-large">Want to know more about upcoming events, projects, or cause
                         registrations? <br> Please select your option below! </p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -554,7 +559,7 @@
                             <img class="img-fluid" src="images/_team/_cole-colorcorrected.jpg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Cole Thiessen</strong></p>
-                        <p class="job-title">UofC Leader</p>
+                        <p class="job-title">Co-President</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/ckthiessen> <i
@@ -571,7 +576,7 @@
                             <img class="img-fluid" src="images/_team/_ariba.jpg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Ariba Anees</strong></p>
-                        <p class="job-title">UofC Leader</p>
+                        <p class="job-title">Co-President</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/aribaanees> <i
@@ -607,7 +612,7 @@
                             <img class="img-fluid" src="images/_team/_dustin-centered.jpg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Dustin King</strong></p>
-                        <p class="job-title">UofC Leader</p>
+                        <p class="job-title">VP of Finance</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/dustin-king-30932a193> <i
@@ -625,7 +630,7 @@
                             <img class="img-fluid" src="images/_team/_cjpg.jpg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Christian Garrovillo</strong></p>
-                        <p class="job-title">SAIT Leader</p>
+                        <p class="job-title">VP of Marketing</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/cgarrovillo> <i
@@ -643,10 +648,28 @@
                             <img class="img-fluid" src="images/_team/_jj.jpg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>JayJay Cayabyab</strong></p>
-                        <p class="job-title">UofC Leader</p>
+                        <p class="job-title">Tech Director</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/jofred-cayabyab> <i
+                                        class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        </span> <!-- end of social-icons -->
+                    </div> <!-- end of team-member -->
+                    <!-- end of team member -->
+
+                    <!-- Team Member -->
+                    <div class="team-member">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" src="images/_team/_avneet.jpg" alt="alternative">
+                        </div> <!-- end of image wrapper -->
+                        <p class="p-large"><strong>Avneet Gill</strong></p>
+                        <p class="job-title">VP of Tech</p>
+                        <span class="social-icons">
+                            <span class="fa-stack">
+                                <a href=https://www.linkedin.com/in/avneet-gill-223a87177> <i
                                         class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-linkedin-in fa-stack-1x"></i>
                                 </a>
@@ -664,7 +687,7 @@
                         </div> <!-- end of image-wrapper -->
 
                         <p class="p-large"><strong>Camilo Rostoker</strong></p>
-                        <p class="job-title">Dev Leader @ Benevity</p>
+                        <p class="job-title">Dev Leader @ <br />Benevity</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/rostoker> <i class="fas fa-circle fa-stack-2x"></i>
@@ -681,7 +704,7 @@
                             <img class="img-fluid" src="images/_team/_priyash.jpg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Priyash Bista</strong></p>
-                        <p class="job-title">Scrum Master @ Benevity</p>
+                        <p class="job-title">Scrum Master @ <br />Benevity</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/priyash> <i class="fas fa-circle fa-stack-2x"></i>
@@ -698,7 +721,7 @@
                             <img class="img-fluid" src="images/_team/_hadiya.jpg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Hadiya Firdaus</strong></p>
-                        <p class="job-title">Software Developer @ Benevity</p>
+                        <p class="job-title">Software Developer @ <br />Benevity</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href=https://www.linkedin.com/in/hfirdaus> <i class="fas fa-circle fa-stack-2x"></i>
