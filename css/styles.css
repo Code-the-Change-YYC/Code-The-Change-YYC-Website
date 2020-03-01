@@ -139,6 +139,14 @@ a.white {
   color: #ff0000;
 }
 
+.btn-group {
+	text-align: center;
+}
+.btn-group .btn-solid-lg {
+	min-width: 139px;
+	max-width: 139px;
+}
+
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
