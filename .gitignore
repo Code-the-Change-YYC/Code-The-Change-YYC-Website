@@ -1,2 +1,8 @@
 # ignore all vscode workspace files
 *.code-workspace
+node_modules
+
+# ignore Auto-generated Gatsby files
+.cache
+public
+old
