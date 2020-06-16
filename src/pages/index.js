@@ -6,6 +6,7 @@ import { ContentLeft, ContentRight, ContentCenter } from "../components/Content"
 import { CardGroup, Card } from "../components/Card"
 import { Modal } from "../components/Modal"
 import InternalLink from "../components/InternalLink"
+import MemberExec from "../components/MemberExec"
 
 export default function Home({ location }) {
   return (
@@ -261,6 +262,88 @@ export default function Home({ location }) {
           </li>
         </ul>
       </Modal>
+
+      <ContentCenter>
+        <h2>More Information</h2>
+        <p class="p-heading p-large">
+          Want to know more about upcoming events, projects, or cause
+          registrations? <br /> Please select your option below!
+        </p>
+        <CardGroup>
+          <div class="card">
+            <a href="events.html">
+              <img
+                class="card-image"
+                src="images/_calendar2.svg"
+                alt="alternative"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Upcoming Events</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="card">
+            <a href="projects.html">
+              <img
+                class="card-image"
+                src="images/_projects3.svg"
+                alt="alternative"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Our Projects</h4>
+              </div>
+            </a>
+          </div>
+
+          <div class="card">
+            <a href="causes.html">
+              <img
+                class="card-image"
+                src="images/_signup2.svg"
+                alt="alternative"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Cause Project Submission</h4>
+              </div>
+            </a>
+          </div>
+        </CardGroup>
+      </ContentCenter>
+
+      <ContentCenter>
+        <h4>Student Executives</h4>
+        <br />
+
+        <MemberExec src="images/_team/_cole-colorcorrected.jpg">
+          <p className="p-large">
+            <strong>Cole Thiessen</strong>
+          </p>
+          <p className="job-title">Co-President</p>
+        </MemberExec>
+
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img
+              class="img-fluid"
+              src="images/_team/_cole-colorcorrected.jpg"
+              alt="alternative"
+            />
+          </div>
+          <p class="p-large">
+            <strong>Cole Thiessen</strong>
+          </p>
+          <p class="job-title">Co-President</p>
+          <span class="social-icons">
+            <span class="fa-stack">
+              <a href="https://www.linkedin.com/in/ckthiessen">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x" id="cole"></i>
+              </a>
+            </span>
+          </span>
+        </div>
+      </ContentCenter>
     </Layout>
   )
 }

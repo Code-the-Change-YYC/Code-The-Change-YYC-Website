@@ -22,11 +22,8 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext"
           rel="stylesheet"
         />
-        <link
-          href={withPrefix("css/bootstrap.css")}
-          rel="stylesheet"
-          type="text/css"
-        />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link
           href="/css/fontawesome-all.css"
           rel="stylesheet"
@@ -34,11 +31,7 @@ export default function HTML(props) {
         />
         <link href="/css/swiper.css" rel="stylesheet" type="text/css" />
         <link href="/css/magnific-popup.css" rel="stylesheet" type="text/css" />
-        <link
-          href={withPrefix("css/styles.css")}
-          rel="stylesheet"
-          type="text/css"
-        />
+
         <script defer src="/js/jquery.min.js" type="text/javascript"></script>
         <script defer src="/js/popper.min.js" type="text/javascript"></script>
         <script
