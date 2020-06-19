@@ -5,10 +5,10 @@ import { Link } from "gatsby"
 import { ContentLeft, ContentRight, ContentCenter } from "../components/Content"
 import { CardGroup, Card } from "../components/Card"
 import { Modal } from "../components/Modal"
-import InternalLink from "../components/InternalLink"
 import MemberExec from "../components/MemberExec"
 
 export default function Home({ location }) {
+  console.log("index")
   return (
     <Layout location={location}>
       <header id="header" className="header">
@@ -18,7 +18,7 @@ export default function Home({ location }) {
               <div className="col-lg-6">
                 <div className="text-container">
                   <h1>
-                    <span className="turquoise">Code The Change</span>
+                    <span className="turquoise">Code The Change </span>
                     <span className="red">YYC</span>
                   </h1>
                   <p className="p-large">
@@ -203,65 +203,155 @@ export default function Home({ location }) {
         </p>
       </ContentLeft>
 
-      <Modal
+      <div
         id="details-lightbox-1"
-        img={
-          <img
-            className="img-fluid"
-            src="images/_rockets.jpg"
-            alt="alternative"
-          />
-        }
-        a={
-          <a
-            className="btn-solid-reg mfp-close page-scroll"
-            href="projects.html"
-          >
-            PROJECTS
-          </a>
-        }
+        class="lightbox-basic zoom-anim-dialog mfp-hide"
       >
-        <h3>Student Information</h3>
-        <hr />
-        <h5>What's in it for you?</h5>
-        <p>
-          You will be a part of a small team of programming students and will
-          work together on projects to help charities and non-profits who don’t
-          have the means to otherwise access expert technical services.
-        </p>
-        <p>
-          You will also receive mentorship from senior programmers and technical
-          leaders from around Calgary to expand your skillset and gain
-          experience applying what you’ve learned in school to solve real-life
-          problems.
-        </p>
-        <ul className="list-unstyled li-space-lg">
-          <li className="media">
-            <i className="fas fa-check"></i>
-            <div className="media-body">
-              Network with likeminded individuals
+        <div class="container">
+          <div class="row">
+            <button
+              title="Close (Esc)"
+              type="button"
+              class="mfp-close x-button"
+            >
+              ×
+            </button>
+            <div class="col-lg-8">
+              <div class="image-container">
+                <img
+                  class="img-fluid"
+                  src="images/_rockets.jpg"
+                  alt="alternative"
+                />
+              </div>
             </div>
-          </li>
-          <li className="media">
-            <i className="fas fa-check"></i>
-            <div className="media-body">Work on real world problems</div>
-          </li>
-          <li className="media">
-            <i className="fas fa-check"></i>
-            <div className="media-body">Get some real world experience</div>
-          </li>
-          <li className="media">
-            <i className="fas fa-check"></i>
-            <div className="media-body">Work with industry mentors</div>
-          </li>
-          <li className="media">
-            <i className="fas fa-check"></i>
-            <div className="media-body">
-              Use the power of technology for good
+            <div class="col-lg-4">
+              <h3>Student Information</h3>
+              <hr />
+              <h5>What's in it for you?</h5>
+              <p>
+                You will be a part of a small team of programming students and
+                will work together on projects to help charities and non-profits
+                who don’t have the means to otherwise access expert technical
+                services.
+              </p>
+              <p>
+                You will also receive mentorship from senior programmers and
+                technical leaders from around Calgary to expand your skillset
+                and gain experience applying what you’ve learned in school to
+                solve real-life problems.
+              </p>
+              <ul class="list-unstyled li-space-lg">
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">
+                    Network with likeminded individuals
+                  </div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Work on real world problems</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Get some real world experience</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Work with industry mentors</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">
+                    Use the power of technology for good
+                  </div>
+                </li>
+              </ul>
+              <a class="btn-solid-reg mfp-close page-scroll" href="/projects">
+                PROJECTS
+              </a>
+              <a
+                class="btn-outline-reg mfp-close as-button"
+                href="#screenshots"
+              >
+                BACK
+              </a>
             </div>
-          </li>
-        </ul>
-      </Modal>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="details-lightbox-2"
+        class="lightbox-basic zoom-anim-dialog mfp-hide"
+      >
+        <div class="container">
+          <div class="row">
+            <button
+              title="Close (Esc)"
+              type="button"
+              class="mfp-close x-button"
+            >
+              ×
+            </button>
+            <div class="col-lg-8">
+              <div class="image-container">
+                <img
+                  class="img-fluid"
+                  src="images/_causesVector.jpg"
+                  alt="alternative"
+                />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h3>Cause Information</h3>
+              <hr />
+              <h5>How will this work?</h5>
+              <p>
+                Project selection will be based on participating student group
+                capacity, and skillset.
+              </p>
+              <p>
+                Student groups will assign a member of their team to communicate
+                with the cause over the course of the year. Your committment
+                level will depend on the project. There is going to be ample
+                oppotunities for regular check-ins with the team to provide
+                feedback, guidance, and ensure they have all requirements and
+                specifications to do their work.
+              </p>
+              <ul class="list-unstyled li-space-lg">
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Get fresh perspectives</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Mentor young minds</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">Outsource technical work</div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-check"></i>
+                  <div class="media-body">
+                    Build a thorough technical solution
+                  </div>
+                </li>
+              </ul>
+              <a class="btn-solid-reg mfp-close page-scroll" href="causes.html">
+                REGISTER
+              </a>{" "}
+              <a
+                class="btn-outline-reg mfp-close as-button"
+                href="#screenshots"
+              >
+                BACK
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <ContentCenter>
         <h2>More Information</h2>
@@ -284,7 +374,7 @@ export default function Home({ location }) {
           </div>
 
           <div class="card">
-            <a href="projects.html">
+            <a href="/projects">
               <img
                 class="card-image"
                 src="images/_projects3.svg"
@@ -311,37 +401,110 @@ export default function Home({ location }) {
         </CardGroup>
       </ContentCenter>
 
-      <ContentCenter>
+      <ContentCenter className="basic-4">
+        <h2>Team YYC</h2>
+        <p class="p-heading p-large">
+          This is the team responsible for bringing Code The Change to life in
+          Calgary. <br /> To contact them directly, please reach out via
+          LinkedIn.
+        </p>
         <h4>Student Executives</h4>
         <br />
 
-        <MemberExec src="images/_team/_cole-colorcorrected.jpg">
+        <MemberExec
+          src="images/_team/_cole-colorcorrected.jpg"
+          href="https://www.linkedin.com/in/ckthiessen"
+        >
           <p className="p-large">
             <strong>Cole Thiessen</strong>
           </p>
           <p className="job-title">Co-President</p>
         </MemberExec>
 
-        <div class="team-member">
-          <div class="image-wrapper">
-            <img
-              class="img-fluid"
-              src="images/_team/_cole-colorcorrected.jpg"
-              alt="alternative"
-            />
-          </div>
+        <MemberExec
+          src="images/_team/_ariba.jpg"
+          href="https://www.linkedin.com/in/aribaanees"
+        >
           <p class="p-large">
-            <strong>Cole Thiessen</strong>
+            <strong>Ariba Anees</strong>
           </p>
           <p class="job-title">Co-President</p>
-          <span class="social-icons">
-            <span class="fa-stack">
-              <a href="https://www.linkedin.com/in/ckthiessen">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-linkedin-in fa-stack-1x" id="cole"></i>
-              </a>
-            </span>
-          </span>
+        </MemberExec>
+
+        <MemberExec
+          src="images/_team/_dustin-centered.jpg"
+          href="https://www.linkedin.com/in/dustin-king-30932a193"
+        >
+          <p class="p-large">
+            <strong>Dustin King</strong>
+          </p>
+          <p class="job-title">VP of Finance</p>
+        </MemberExec>
+
+        <MemberExec
+          src="images/_team/_cjpg.jpg"
+          href="https://www.linkedin.com/in/cgarrovillo"
+        >
+          <p class="p-large">
+            <strong>Christian Garrovillo</strong>
+          </p>
+          <p class="job-title">VP of Marketing</p>
+        </MemberExec>
+
+        <MemberExec
+          src="images/_team/_jj.jpg"
+          href="https://www.linkedin.com/in/jofred-cayabyab"
+        >
+          <p class="p-large">
+            <strong>JayJay Cayabyab</strong>
+          </p>
+          <p class="job-title">Tech Director</p>
+        </MemberExec>
+
+        <MemberExec
+          src="images/_team/_avneet.jpg"
+          href="https://www.linkedin.com/in/avneet-gill-223a87177"
+        >
+          <p class="p-large">
+            <strong>Avneet Gill</strong>
+          </p>
+          <p class="job-title">VP of Tech</p>
+        </MemberExec>
+      </ContentCenter>
+
+      <ContentCenter>
+        <h2>Sponsors</h2>
+      </ContentCenter>
+
+      <ContentCenter className="form-2">
+        <h2>Contact Information</h2>
+        <ul class="list-unstyled li-space-lg">
+          <li class="address">
+            Since Code the Change YYC is composed of many students from multiple
+            post-seconary institutions, the club needed a central place to hold
+            events and gatherings. Benevity as a corporate partner graciously
+            provides their office space for club events and meetups.
+            <br /> Reach out to us on our{" "}
+            <a href="https://www.facebook.com/CodeTheChangeYYC/">
+              Facebook page
+            </a>{" "}
+            or via email at{" "}
+            <a class="turquoise" href="mailto:codethechangeyyc@gmail.com">
+              codethechangeyyc@gmail.com
+            </a>
+            .
+          </li>
+
+          <li>
+            <i class="fas fa-map-marker-alt"></i>611 Meredith Rd NE #700,
+            Calgary, AB T2E 2W5, Canada
+          </li>
+        </ul>
+        <div class="map-responsive">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.0794383966327!2d-114.05320568377702!3d51.05162097956288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717002bfa848b5%3A0xde11feaa52802a04!2sBenevity%2C%20Inc.!5e0!3m2!1sen!2sca!4v1570403455129!5m2!1sen!2sca"
+            allowfullscreen=""
+          ></iframe>
         </div>
       </ContentCenter>
     </Layout>

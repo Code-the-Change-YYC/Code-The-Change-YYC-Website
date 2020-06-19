@@ -18,44 +18,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext"
-          rel="stylesheet"
-        />
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-        <link
-          href="/css/fontawesome-all.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link href="/css/swiper.css" rel="stylesheet" type="text/css" />
-        <link href="/css/magnific-popup.css" rel="stylesheet" type="text/css" />
-
-        <script defer src="/js/jquery.min.js" type="text/javascript"></script>
-        <script defer src="/js/popper.min.js" type="text/javascript"></script>
-        <script
-          defer
-          src="/js/bootstrap.min.js"
-          type="text/javascript"
-        ></script>
-        <script
-          defer
-          src="/js/jquery.easing.min.js"
-          type="text/javascript"
-        ></script>
-        <script defer src="js/swiper.min.js" type="text/javascript"></script>
-        <script
-          defer
-          src="/js/jquery.magnific-popup.js"
-          type="text/javascript"
-        ></script>
-        <script
-          defer
-          src="/js/validator.min.js"
-          type="text/javascript"
-        ></script>
-        <script defer src="/js/scripts.js" type="text/javascript"></script>
       </head>
       <body
         data-spy="scroll"

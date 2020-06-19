@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
-import { InternalLink } from "../InternalLink"
+import { InternalLink } from "./InternalLink"
 
 export default function Navbar({ location }) {
   return (
@@ -105,13 +105,3 @@ export default function Navbar({ location }) {
     </nav>
   )
 }
-
-export const query = graphql`
-  query {
-    allSitePage {
-      nodes {
-        path
-      }
-    }
-  }
-`

@@ -9,8 +9,8 @@ import { Link } from "gatsby"
  * <Link> when not.
  */
 export const InternalLink = ({ location, to, children }) => {
-  console.log(`location: ${location.pathname}`)
-  console.log(`to: ${to}`)
+  // console.log(`location: ${location.pathname}`)
+  // console.log(`to: ${to}`)
   let path = ""
   if (to.includes("#")) {
     if (to.includes(location.pathname)) {
