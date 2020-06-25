@@ -108,11 +108,13 @@ h6 {
 a {
 	color: #626262;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 a:hover {
 	color: #626262;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 a.turquoise {
@@ -918,6 +920,8 @@ input[type='checkbox'] {
 	border-radius: 0.25rem;
 	background: #fff;
 	text-align: left;
+
+	opacity: 1;
 }
 
 .lightbox-basic .container {
@@ -2204,3 +2208,5 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+
+/* Start Non-Template default CSS */

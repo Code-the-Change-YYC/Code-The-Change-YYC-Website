@@ -1,14 +1,29 @@
 import React from "react"
+import Modal from "react-modal"
 
-export const Modal = ({ id, children, img, cta }) => {
+export const CustomModal = ({
+  id,
+  children,
+  img,
+  cta,
+  isOpen,
+  onRequestClose,
+}) => {
   return (
-    <div id={id} className="lightbox-basic zoom-anim-dialog mfp-hide">
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+      shouldCloseOnOverlayClick={true}
+      className="lightbox-basic"
+      overlayClassName="mfp-bg"
+    >
       <div className="container">
         <div className="row">
           <button
             title="Close (Esc)"
             type="button"
             className="mfp-close x-button"
+            onClick={onRequestClose}
           >
             ×
           </button>
@@ -17,16 +32,16 @@ export const Modal = ({ id, children, img, cta }) => {
           </div>
           <div className="col-lg-4">
             {children}
-            {cta}{" "}
+            {cta}
             <a
               className="btn-outline-reg mfp-close as-button"
-              href="#screenshots"
+              onClick={onRequestClose}
             >
               BACK
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </Modal>
   )
 }

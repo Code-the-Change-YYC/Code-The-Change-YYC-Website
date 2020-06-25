@@ -1,14 +1,40 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
 
 import { ContentLeft, ContentRight, ContentCenter } from "../components/Content"
 import { CardGroup, Card } from "../components/Card"
-import { Modal } from "../components/Modal"
+import { CustomModal } from "../components/CustomModal"
 import MemberExec from "../components/MemberExec"
 
 export default function Home({ location }) {
-  console.log("index")
+  const [studModalOpen, setStudModalOpen] = useState(false)
+  const [causeModalOpen, setCauseModalOpen] = useState(false)
+  const [mentorModalOpen, setMentorModalOpen] = useState(false)
+
+  function openStudModal() {
+    setStudModalOpen(true)
+  }
+
+  function closeStudModal() {
+    setStudModalOpen(false)
+  }
+
+  function openCauseModal() {
+    setCauseModalOpen(true)
+  }
+
+  function closeCauseModal() {
+    setCauseModalOpen(false)
+  }
+
+  function openMentorModal() {
+    setMentorModalOpen(true)
+  }
+
+  function closeMentorModal() {
+    setMentorModalOpen(false)
+  }
+
   return (
     <Layout location={location}>
       <header id="header" className="header">
@@ -110,7 +136,7 @@ export default function Home({ location }) {
         cta={
           <a
             className="btn-solid-reg popup-with-move-anim"
-            href="#details-lightbox-1"
+            onClick={openStudModal}
           >
             Details
           </a>
@@ -132,6 +158,56 @@ export default function Home({ location }) {
         </p>
       </ContentLeft>
 
+      <CustomModal
+        isOpen={studModalOpen}
+        onRequestClose={closeStudModal}
+        img={
+          <img class="img-fluid" src="images/_rockets.jpg" alt="alternative" />
+        }
+        cta={
+          <a class="btn-solid-reg mfp-close page-scroll" href="/projects">
+            PROJECTS
+          </a>
+        }
+      >
+        <h3>Student Information</h3>
+        <hr />
+        <h5>What's in it for you?</h5>
+        <p>
+          You will be a part of a small team of programming students and will
+          work together on projects to help charities and non-profits who don’t
+          have the means to otherwise access expert technical services.
+        </p>
+        <p>
+          You will also receive mentorship from senior programmers and technical
+          leaders from around Calgary to expand your skillset and gain
+          experience applying what you’ve learned in school to solve real-life
+          problems.
+        </p>
+        <ul class="list-unstyled li-space-lg">
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Network with likeminded individuals</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Work on real world problems</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Get some real world experience</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Work with industry mentors</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Use the power of technology for good</div>
+          </li>
+        </ul>
+      </CustomModal>
+
       <ContentRight
         id="causes"
         img={
@@ -144,7 +220,7 @@ export default function Home({ location }) {
         cta={
           <a
             className="btn-solid-reg popup-with-move-anim"
-            href="#details-lightbox-2"
+            onClick={openCauseModal}
           >
             Details
           </a>
@@ -172,6 +248,56 @@ export default function Home({ location }) {
         </p>
       </ContentRight>
 
+      <CustomModal
+        isOpen={causeModalOpen}
+        onRequestClose={closeCauseModal}
+        img={
+          <img
+            class="img-fluid"
+            src="images/_causesVector.jpg"
+            alt="alternative"
+          />
+        }
+        cta={
+          <a class="btn-solid-reg mfp-close page-scroll" href="/causes">
+            REGISTER
+          </a>
+        }
+      >
+        <h3>Cause Information</h3>
+        <hr />
+        <h5>How will this work?</h5>
+        <p>
+          Project selection will be based on participating student group
+          capacity, and skillset.
+        </p>
+        <p>
+          Student groups will assign a member of their team to communicate with
+          the cause over the course of the year. Your committment level will
+          depend on the project. There is going to be ample oppotunities for
+          regular check-ins with the team to provide feedback, guidance, and
+          ensure they have all requirements and specifications to do their work.
+        </p>
+        <ul class="list-unstyled li-space-lg">
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Get fresh perspectives</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Mentor young minds</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Outsource technical work</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Build a thorough technical solution</div>
+          </li>
+        </ul>
+      </CustomModal>
+
       <ContentLeft
         id="mentors"
         img={
@@ -184,7 +310,7 @@ export default function Home({ location }) {
         cta={
           <a
             className="btn-solid-reg popup-with-move-anim"
-            href="#details-lightbox-3"
+            onClick={openMentorModal}
           >
             Details
           </a>
@@ -203,155 +329,59 @@ export default function Home({ location }) {
         </p>
       </ContentLeft>
 
-      <div
-        id="details-lightbox-1"
-        class="lightbox-basic zoom-anim-dialog mfp-hide"
+      <CustomModal
+        isOpen={mentorModalOpen}
+        onRequestClose={closeMentorModal}
+        img={
+          <img class="img-fluid" src="images/_mentors.jpg" alt="alternative" />
+        }
+        cta={
+          <a class="btn-solid-reg mfp-close page-scroll" href="/events">
+            EVENTS
+          </a>
+        }
       >
-        <div class="container">
-          <div class="row">
-            <button
-              title="Close (Esc)"
-              type="button"
-              class="mfp-close x-button"
-            >
-              ×
-            </button>
-            <div class="col-lg-8">
-              <div class="image-container">
-                <img
-                  class="img-fluid"
-                  src="images/_rockets.jpg"
-                  alt="alternative"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <h3>Student Information</h3>
-              <hr />
-              <h5>What's in it for you?</h5>
-              <p>
-                You will be a part of a small team of programming students and
-                will work together on projects to help charities and non-profits
-                who don’t have the means to otherwise access expert technical
-                services.
-              </p>
-              <p>
-                You will also receive mentorship from senior programmers and
-                technical leaders from around Calgary to expand your skillset
-                and gain experience applying what you’ve learned in school to
-                solve real-life problems.
-              </p>
-              <ul class="list-unstyled li-space-lg">
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">
-                    Network with likeminded individuals
-                  </div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">Work on real world problems</div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">Get some real world experience</div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">Work with industry mentors</div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">
-                    Use the power of technology for good
-                  </div>
-                </li>
-              </ul>
-              <a class="btn-solid-reg mfp-close page-scroll" href="/projects">
-                PROJECTS
-              </a>
-              <a
-                class="btn-outline-reg mfp-close as-button"
-                href="#screenshots"
-              >
-                BACK
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="details-lightbox-2"
-        class="lightbox-basic zoom-anim-dialog mfp-hide"
-      >
-        <div class="container">
-          <div class="row">
-            <button
-              title="Close (Esc)"
-              type="button"
-              class="mfp-close x-button"
-            >
-              ×
-            </button>
-            <div class="col-lg-8">
-              <div class="image-container">
-                <img
-                  class="img-fluid"
-                  src="images/_causesVector.jpg"
-                  alt="alternative"
-                />
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <h3>Cause Information</h3>
-              <hr />
-              <h5>How will this work?</h5>
-              <p>
-                Project selection will be based on participating student group
-                capacity, and skillset.
-              </p>
-              <p>
-                Student groups will assign a member of their team to communicate
-                with the cause over the course of the year. Your committment
-                level will depend on the project. There is going to be ample
-                oppotunities for regular check-ins with the team to provide
-                feedback, guidance, and ensure they have all requirements and
-                specifications to do their work.
-              </p>
-              <ul class="list-unstyled li-space-lg">
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">Get fresh perspectives</div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">Mentor young minds</div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">Outsource technical work</div>
-                </li>
-                <li class="media">
-                  <i class="fas fa-check"></i>
-                  <div class="media-body">
-                    Build a thorough technical solution
-                  </div>
-                </li>
-              </ul>
-              <a class="btn-solid-reg mfp-close page-scroll" href="causes.html">
-                REGISTER
-              </a>{" "}
-              <a
-                class="btn-outline-reg mfp-close as-button"
-                href="#screenshots"
-              >
-                BACK
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <h3>Mentor Information</h3>
+        <hr />
+        <h5>Why become a mentor?</h5>
+        <p>
+          Your ability to bring real world experience will allow the students'
+          to apply their learnings, and ensure what they are practicing is
+          relevant for the current job market.
+        </p>
+        <p>
+          Once you have selected the team you would like to mentor, the team
+          will set aside at least one hour a week for working session meetings.
+          Please communicate with the team as to its frequency, when and where
+          the meeting would take place.
+        </p>
+        <ul class="list-unstyled li-space-lg">
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Give back to the community</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Take someone under your wings</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Help resource constrained causes</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Make a difference</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Grow your network</div>
+          </li>
+          <li class="media">
+            <i class="fas fa-check"></i>
+            <div class="media-body">Earn volunteer hours</div>
+          </li>
+        </ul>
+      </CustomModal>
 
       <ContentCenter>
         <h2>More Information</h2>
