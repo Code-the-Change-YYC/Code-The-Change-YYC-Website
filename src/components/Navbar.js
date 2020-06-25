@@ -44,26 +44,27 @@ export default function Navbar({ location }) {
             </InternalLink>
           </li>
           <li className="nav-item dropdown">
-            <a
+            <InternalLink
               className="nav-link dropdown-toggle page-scroll"
-              href="#information"
+              to="/#information"
               id="navbarDropdown"
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
+              location={location}
             >
               Details
-            </a>
+            </InternalLink>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="events.html">
+              <a className="dropdown-item" href="/events">
                 <span className="item-text">Events</span>
               </a>
               <div className="dropdown-items-divide-hr"></div>
-              <a className="dropdown-item" href="projects.html">
+              <a className="dropdown-item" href="/projects">
                 <span className="item-text">Projects</span>
               </a>
               <div className="dropdown-items-divide-hr"></div>
-              <a className="dropdown-item" href="sponsors.html">
+              <a className="dropdown-item" href="/sponsors">
                 <span className="item-text">Sponsors</span>
               </a>
             </div>
@@ -91,14 +92,22 @@ export default function Navbar({ location }) {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link page-scroll" href="index.html#about">
+            <InternalLink
+              className="nav-link page-scroll"
+              to="/index#about"
+              location={location}
+            >
               About
-            </a>
+            </InternalLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link page-scroll" href="index.html#contact">
+            <InternalLink
+              className="nav-link page-scroll"
+              to="/index#contact"
+              location={location}
+            >
               Contact
-            </a>
+            </InternalLink>
           </li>
         </ul>
       </div>

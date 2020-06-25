@@ -36,11 +36,6 @@ export default function Layout({ children, location }) {
         ></script>
         <script
           defer
-          src={withPrefix("/js/jquery.magnific-popup.js")}
-          type="text/javascript"
-        ></script>
-        <script
-          defer
           src={withPrefix("/js/validator.min.js")}
           type="text/javascript"
         ></script>
@@ -71,7 +66,7 @@ export default function Layout({ children, location }) {
           type="text/css"
         />
         <link
-          href={withPrefix("css/styles.css")}
+          href={withPrefix("/css/styles.css")}
           rel="stylesheet"
           type="text/css"
         />

@@ -76,7 +76,7 @@ export default function Home({ location }) {
                         </a>
                         <a
                           className="btn-solid-lg page-scroll m-1"
-                          href="sponsors.html"
+                          href="#sponsors"
                         >
                           Sponsors
                         </a>
@@ -162,10 +162,14 @@ export default function Home({ location }) {
         isOpen={studModalOpen}
         onRequestClose={closeStudModal}
         img={
-          <img class="img-fluid" src="images/_rockets.jpg" alt="alternative" />
+          <img
+            className="img-fluid"
+            src="images/_rockets.jpg"
+            alt="alternative"
+          />
         }
         cta={
-          <a class="btn-solid-reg mfp-close page-scroll" href="/projects">
+          <a className="btn-solid-reg mfp-close page-scroll" href="/projects">
             PROJECTS
           </a>
         }
@@ -184,26 +188,30 @@ export default function Home({ location }) {
           experience applying what you’ve learned in school to solve real-life
           problems.
         </p>
-        <ul class="list-unstyled li-space-lg">
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Network with likeminded individuals</div>
+        <ul className="list-unstyled li-space-lg">
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">
+              Network with likeminded individuals
+            </div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Work on real world problems</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Work on real world problems</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Get some real world experience</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Get some real world experience</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Work with industry mentors</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Work with industry mentors</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Use the power of technology for good</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">
+              Use the power of technology for good
+            </div>
           </li>
         </ul>
       </CustomModal>
@@ -253,13 +261,13 @@ export default function Home({ location }) {
         onRequestClose={closeCauseModal}
         img={
           <img
-            class="img-fluid"
+            className="img-fluid"
             src="images/_causesVector.jpg"
             alt="alternative"
           />
         }
         cta={
-          <a class="btn-solid-reg mfp-close page-scroll" href="/causes">
+          <a className="btn-solid-reg mfp-close page-scroll" href="/causes">
             REGISTER
           </a>
         }
@@ -278,22 +286,24 @@ export default function Home({ location }) {
           regular check-ins with the team to provide feedback, guidance, and
           ensure they have all requirements and specifications to do their work.
         </p>
-        <ul class="list-unstyled li-space-lg">
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Get fresh perspectives</div>
+        <ul className="list-unstyled li-space-lg">
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Get fresh perspectives</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Mentor young minds</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Mentor young minds</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Outsource technical work</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Outsource technical work</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Build a thorough technical solution</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">
+              Build a thorough technical solution
+            </div>
           </li>
         </ul>
       </CustomModal>
@@ -333,10 +343,14 @@ export default function Home({ location }) {
         isOpen={mentorModalOpen}
         onRequestClose={closeMentorModal}
         img={
-          <img class="img-fluid" src="images/_mentors.jpg" alt="alternative" />
+          <img
+            className="img-fluid"
+            src="images/_mentors.jpg"
+            alt="alternative"
+          />
         }
         cta={
-          <a class="btn-solid-reg mfp-close page-scroll" href="/events">
+          <a className="btn-solid-reg mfp-close page-scroll" href="/events">
             EVENTS
           </a>
         }
@@ -355,76 +369,76 @@ export default function Home({ location }) {
           Please communicate with the team as to its frequency, when and where
           the meeting would take place.
         </p>
-        <ul class="list-unstyled li-space-lg">
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Give back to the community</div>
+        <ul className="list-unstyled li-space-lg">
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Give back to the community</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Take someone under your wings</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Take someone under your wings</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Help resource constrained causes</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Help resource constrained causes</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Make a difference</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Make a difference</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Grow your network</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Grow your network</div>
           </li>
-          <li class="media">
-            <i class="fas fa-check"></i>
-            <div class="media-body">Earn volunteer hours</div>
+          <li className="media">
+            <i className="fas fa-check"></i>
+            <div className="media-body">Earn volunteer hours</div>
           </li>
         </ul>
       </CustomModal>
 
       <ContentCenter>
         <h2>More Information</h2>
-        <p class="p-heading p-large">
+        <p className="p-heading p-large">
           Want to know more about upcoming events, projects, or cause
           registrations? <br /> Please select your option below!
         </p>
         <CardGroup>
-          <div class="card">
+          <div className="card">
             <a href="events.html">
               <img
-                class="card-image"
+                className="card-image"
                 src="images/_calendar2.svg"
                 alt="alternative"
               />
-              <div class="card-body">
-                <h4 class="card-title">Upcoming Events</h4>
+              <div className="card-body">
+                <h4 className="card-title">Upcoming Events</h4>
               </div>
             </a>
           </div>
 
-          <div class="card">
+          <div className="card">
             <a href="/projects">
               <img
-                class="card-image"
+                className="card-image"
                 src="images/_projects3.svg"
                 alt="alternative"
               />
-              <div class="card-body">
-                <h4 class="card-title">Our Projects</h4>
+              <div className="card-body">
+                <h4 className="card-title">Our Projects</h4>
               </div>
             </a>
           </div>
 
-          <div class="card">
+          <div className="card">
             <a href="causes.html">
               <img
-                class="card-image"
+                className="card-image"
                 src="images/_signup2.svg"
                 alt="alternative"
               />
-              <div class="card-body">
-                <h4 class="card-title">Cause Project Submission</h4>
+              <div className="card-body">
+                <h4 className="card-title">Cause Project Submission</h4>
               </div>
             </a>
           </div>
@@ -433,7 +447,7 @@ export default function Home({ location }) {
 
       <ContentCenter className="basic-4">
         <h2>Team YYC</h2>
-        <p class="p-heading p-large">
+        <p className="p-heading p-large">
           This is the team responsible for bringing Code The Change to life in
           Calgary. <br /> To contact them directly, please reach out via
           LinkedIn.
@@ -455,86 +469,83 @@ export default function Home({ location }) {
           src="images/_team/_ariba.jpg"
           href="https://www.linkedin.com/in/aribaanees"
         >
-          <p class="p-large">
+          <p className="p-large">
             <strong>Ariba Anees</strong>
           </p>
-          <p class="job-title">Co-President</p>
+          <p className="job-title">Co-President</p>
         </MemberExec>
 
         <MemberExec
           src="images/_team/_dustin-centered.jpg"
           href="https://www.linkedin.com/in/dustin-king-30932a193"
         >
-          <p class="p-large">
+          <p className="p-large">
             <strong>Dustin King</strong>
           </p>
-          <p class="job-title">VP of Finance</p>
+          <p className="job-title">VP of Finance</p>
         </MemberExec>
 
         <MemberExec
           src="images/_team/_cjpg.jpg"
           href="https://www.linkedin.com/in/cgarrovillo"
         >
-          <p class="p-large">
+          <p className="p-large">
             <strong>Christian Garrovillo</strong>
           </p>
-          <p class="job-title">VP of Marketing</p>
+          <p className="job-title">VP of Marketing</p>
         </MemberExec>
 
         <MemberExec
           src="images/_team/_jj.jpg"
           href="https://www.linkedin.com/in/jofred-cayabyab"
         >
-          <p class="p-large">
+          <p className="p-large">
             <strong>JayJay Cayabyab</strong>
           </p>
-          <p class="job-title">Tech Director</p>
+          <p className="job-title">Tech Director</p>
         </MemberExec>
 
         <MemberExec
           src="images/_team/_avneet.jpg"
           href="https://www.linkedin.com/in/avneet-gill-223a87177"
         >
-          <p class="p-large">
+          <p className="p-large">
             <strong>Avneet Gill</strong>
           </p>
-          <p class="job-title">VP of Tech</p>
+          <p className="job-title">VP of Tech</p>
         </MemberExec>
       </ContentCenter>
 
-      <ContentCenter>
+      <ContentCenter id="sponsors">
         <h2>Sponsors</h2>
       </ContentCenter>
 
-      <ContentCenter className="form-2">
+      <ContentCenter className="form-2" id="information">
         <h2>Contact Information</h2>
-        <ul class="list-unstyled li-space-lg">
-          <li class="address">
+        <ul className="list-unstyled li-space-lg">
+          <li className="address">
             Since Code the Change YYC is composed of many students from multiple
             post-seconary institutions, the club needed a central place to hold
             events and gatherings. Benevity as a corporate partner graciously
             provides their office space for club events and meetups.
-            <br /> Reach out to us on our{" "}
+            <br /> Reach out to us on our
             <a href="https://www.facebook.com/CodeTheChangeYYC/">
               Facebook page
-            </a>{" "}
-            or via email at{" "}
-            <a class="turquoise" href="mailto:codethechangeyyc@gmail.com">
+            </a>
+            or via email at
+            <a className="turquoise" href="mailto:codethechangeyyc@gmail.com">
               codethechangeyyc@gmail.com
             </a>
             .
           </li>
 
           <li>
-            <i class="fas fa-map-marker-alt"></i>611 Meredith Rd NE #700,
+            <i className="fas fa-map-marker-alt"></i>611 Meredith Rd NE #700,
             Calgary, AB T2E 2W5, Canada
           </li>
         </ul>
-        <div class="map-responsive">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.0794383966327!2d-114.05320568377702!3d51.05162097956288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717002bfa848b5%3A0xde11feaa52802a04!2sBenevity%2C%20Inc.!5e0!3m2!1sen!2sca!4v1570403455129!5m2!1sen!2sca"
-            allowfullscreen=""
-          ></iframe>
+        <div className="map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.0794383966327!2d-114.05320568377702!3d51.05162097956288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717002bfa848b5%3A0xde11feaa52802a04!2sBenevity%2C%20Inc.!5e0!3m2!1sen!2sca!4v1570403455129!5m2!1sen!2sca"></iframe>
         </div>
       </ContentCenter>
     </Layout>

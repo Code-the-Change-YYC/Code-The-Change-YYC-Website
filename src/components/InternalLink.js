@@ -8,22 +8,25 @@ import { Link } from "gatsby"
  * Determines whether a link includes a '#' and renders a regular <a> or a Gatsby
  * <Link> when not.
  */
-export const InternalLink = ({ location, to, children }) => {
+export const InternalLink = ({ location, to, children, className }) => {
   // console.log(`location: ${location.pathname}`)
   // console.log(`to: ${to}`)
   let path = ""
-  if (to.includes("#")) {
-    if (to.includes(location.pathname)) {
-      path = to.substr(to.indexOf("#"), to.length)
-      return (
-        <a className="nav-link page-scroll" href={path}>
-          {children}
-        </a>
-      )
+  if (to) {
+    if (to.includes("#")) {
+      if (to.includes(location.pathname)) {
+        path = to.substr(to.indexOf("#"), to.length)
+        return (
+          <a className={`${className ? className : ""}`} href={path}>
+            {children}
+          </a>
+        )
+      }
     }
   }
+
   return (
-    <Link className="nav-link page-scroll" to={to}>
+    <Link className={`${className ? className : ""}`} to={to}>
       {children}
     </Link>
   )
