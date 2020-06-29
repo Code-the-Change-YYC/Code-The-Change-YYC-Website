@@ -18,3 +18,20 @@ export const Card = ({ children, href, src, alt }) => {
     </div>
   )
 }
+
+export const CardEvent = ({ children }) => {
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-2"></div>
+        <div className="col-lg-6">
+          <h3>Event Title</h3>
+          <p>Excerpt</p>
+        </div>
+        <div className="col-lg-4">
+          <h3>date</h3>
+        </div>
+      </div>
+    </div>
+  )
+}

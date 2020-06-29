@@ -4,9 +4,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `updates`,
+        path: `${__dirname}/src/markdown/updates`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/markdown/projects`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 }

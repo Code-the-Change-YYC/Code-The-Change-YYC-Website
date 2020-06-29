@@ -6,7 +6,7 @@ import { CardGroup, Card } from "../components/Card"
 import { CustomModal } from "../components/CustomModal"
 import MemberExec from "../components/MemberExec"
 
-export default function Home({ location }) {
+export default function Home({ location, data }) {
   const [studModalOpen, setStudModalOpen] = useState(false)
   const [causeModalOpen, setCauseModalOpen] = useState(false)
   const [mentorModalOpen, setMentorModalOpen] = useState(false)
@@ -98,6 +98,10 @@ export default function Home({ location }) {
           </div>
         </div>
       </header>
+
+      <ContentCenter id="latest">
+        <h2>Latest Updates</h2>
+      </ContentCenter>
 
       <ContentCenter id="schools">
         <h2>Post-Secondary Representation</h2>
