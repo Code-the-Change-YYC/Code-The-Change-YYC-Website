@@ -1,9 +1,10 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import { CardEvent } from "../components/Card"
 
-export default function Events({ children, location }) {
+export default function Events({ location, data }) {
   return (
     <Layout location={location}>
       <header id="header" className="ex-header">
@@ -19,15 +20,52 @@ export default function Events({ children, location }) {
       <div className="cards-1">
         <div className="container">
           <div className="row">
-            <div className="col-lg-9"></div>
-            <div className="col-lg-3">
-              <h2>2020</h2>
+            <div className="col-lg-12 ">
+              <h2 className="text-center">2020</h2>
             </div>
           </div>
         </div>
       </div>
 
-      <CardEvent></CardEvent>
+      {data.allMarkdownRemark.edges.map(({ node }, key) => {
+        if (node.frontmatter.date.includes("2020"))
+          return <CardEvent key={key}>{node}</CardEvent>
+      })}
+
+      <div className="cards-1">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="text-center">2019</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {data.allMarkdownRemark.edges.map(({ node }, key) => {
+        if (node.frontmatter.date.includes("2019"))
+          return <CardEvent key={key}>{node}</CardEvent>
+      })}
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { fields: { collection: { eq: "updates" } } }
+      sort: { fields: frontmatter___date, order: ASC }
+    ) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            title
+            date
+            img
+          }
+        }
+      }
+    }
+  }
+`

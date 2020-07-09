@@ -1029,7 +1029,6 @@ input[type='checkbox'] {
 	margin-left: auto;
 	border: 1px solid #c4d8dc;
 	border-radius: 0.5rem;
-	vertical-align: top;
 }
 
 .cards-2 .card .card-body {
@@ -2210,3 +2209,21 @@ a:hover.back-to-top {
 /* end of min-width width 1200px */
 
 /* Start Non-Template default CSS */
+.card-event {
+	display: flex;
+	align-items: center;
+} 
+
+.card-event div .row{ 
+	display:flex;
+	justify-content: center;
+	text-align: center;
+}
+.card-event div .row h4 {
+	line-height: 1em;
+	margin: 0;
+}
+
+.card-event div .row h2 {
+	line-height: 0.8em;
+}

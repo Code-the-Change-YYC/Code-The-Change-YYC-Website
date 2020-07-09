@@ -1,6 +1,7 @@
 ---
-tite: "Code The Change Calgary Kickoff + Hackathon"
-date: "Nov 9 2019"
+title: "Code The Change Calgary Kickoff + Hackathon"
+date: "Nov 9 2019 17:00"
+img: "images/_events/codethechangeyyc-infonight.png"
 ---
 
 Join us as we launch the first ever city-wide chapter of Code The Change in Calgary.
