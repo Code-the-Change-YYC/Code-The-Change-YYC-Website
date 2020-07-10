@@ -2212,6 +2212,7 @@ a:hover.back-to-top {
 .card-event {
 	display: flex;
 	align-items: center;
+	min-height: 179px;
 } 
 
 .card-event div .row{ 

@@ -22,6 +22,7 @@ export default function Events({ location, data }) {
           <div className="row">
             <div className="col-lg-12 ">
               <h2 className="text-center">2020</h2>
+              <hr />
             </div>
           </div>
         </div>
@@ -37,6 +38,7 @@ export default function Events({ location, data }) {
           <div className="row">
             <div className="col-lg-12">
               <h2 className="text-center">2019</h2>
+              <hr />
             </div>
           </div>
         </div>
@@ -54,7 +56,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "updates" } } }
-      sort: { fields: frontmatter___date, order: ASC }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
