@@ -17,7 +17,13 @@ export default function Projects({ location }) {
 
       <ContentLeft
         id="yw"
-        img={<img className="card-img" src="/images/_projects/_yw-alt.png" />}
+        img={
+          <img
+            className="card-img"
+            src="/images/_projects/_yw-alt.png"
+            alt=""
+          />
+        }
       >
         <h3 className="text-left">YW Calgary</h3>
         <ul className="list-unstyled li-space-lg text-left">
@@ -62,6 +68,7 @@ export default function Projects({ location }) {
           <img
             className="card-img"
             src="/images/_projects/_amhac-placeholder-alt.png"
+            alt=""
           />
         }
       >
@@ -84,7 +91,11 @@ export default function Projects({ location }) {
       <ContentLeft
         id="mindfuel"
         img={
-          <img className="card-img" src="/images/_projects/_mindfuel-alt.png" />
+          <img
+            className="card-img"
+            src="/images/_projects/_mindfuel-alt.png"
+            alt=""
+          />
         }
       >
         <h3 className="text-left">Mindfuel</h3>

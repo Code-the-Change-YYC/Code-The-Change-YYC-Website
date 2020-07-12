@@ -6,7 +6,7 @@ import { CardGroup, Card } from "../components/Card"
 import { CustomModal } from "../components/CustomModal"
 import MemberExec from "../components/MemberExec"
 
-export default function Home({ location, data }) {
+export default function Home({ location }) {
   const [studModalOpen, setStudModalOpen] = useState(false)
   const [causeModalOpen, setCauseModalOpen] = useState(false)
   const [mentorModalOpen, setMentorModalOpen] = useState(false)
@@ -139,8 +139,9 @@ export default function Home({ location, data }) {
         }
         cta={
           <a
-            className="btn-solid-reg popup-with-move-anim"
+            className="btn-solid-reg popup-with-move-anim page-scroll"
             onClick={openStudModal}
+            href="#students"
           >
             Details
           </a>
@@ -231,8 +232,9 @@ export default function Home({ location, data }) {
         }
         cta={
           <a
-            className="btn-solid-reg popup-with-move-anim"
+            className="btn-solid-reg popup-with-move-anim page-scroll"
             onClick={openCauseModal}
+            href="#causes"
           >
             Details
           </a>
@@ -323,8 +325,9 @@ export default function Home({ location, data }) {
         }
         cta={
           <a
-            className="btn-solid-reg popup-with-move-anim"
+            className="btn-solid-reg popup-with-move-anim page-scroll"
             onClick={openMentorModal}
+            href="#mentors"
           >
             Details
           </a>
@@ -401,7 +404,7 @@ export default function Home({ location, data }) {
         </ul>
       </CustomModal>
 
-      <ContentCenter>
+      <ContentCenter id="information">
         <h2>More Information</h2>
         <p className="p-heading p-large">
           Want to know more about upcoming events, projects, or cause
@@ -449,7 +452,7 @@ export default function Home({ location, data }) {
         </CardGroup>
       </ContentCenter>
 
-      <ContentCenter className="basic-4">
+      <ContentCenter id="about" className="basic-4">
         <h2>Team YYC</h2>
         <p className="p-heading p-large">
           This is the team responsible for bringing Code The Change to life in
@@ -524,7 +527,7 @@ export default function Home({ location, data }) {
         <h2>Sponsors</h2>
       </ContentCenter>
 
-      <ContentCenter className="form-2" id="information">
+      <ContentCenter className="form-2" id="contact">
         <h2>Contact Information</h2>
         <ul className="list-unstyled li-space-lg">
           <li className="address">
@@ -549,7 +552,10 @@ export default function Home({ location, data }) {
           </li>
         </ul>
         <div className="map-responsive">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.0794383966327!2d-114.05320568377702!3d51.05162097956288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717002bfa848b5%3A0xde11feaa52802a04!2sBenevity%2C%20Inc.!5e0!3m2!1sen!2sca!4v1570403455129!5m2!1sen!2sca"></iframe>
+          <iframe
+            title="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.0794383966327!2d-114.05320568377702!3d51.05162097956288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717002bfa848b5%3A0xde11feaa52802a04!2sBenevity%2C%20Inc.!5e0!3m2!1sen!2sca!4v1570403455129!5m2!1sen!2sca"
+          ></iframe>
         </div>
       </ContentCenter>
     </Layout>

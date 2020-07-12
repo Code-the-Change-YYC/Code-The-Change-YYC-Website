@@ -36,6 +36,7 @@ export const CustomModal = ({
             <a
               className="btn-outline-reg mfp-close as-button"
               onClick={onRequestClose}
+              href="#abutton"
             >
               BACK
             </a>

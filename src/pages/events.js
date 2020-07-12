@@ -29,8 +29,10 @@ export default function Events({ location, data }) {
       </div>
 
       {data.allMarkdownRemark.edges.map(({ node }, key) => {
-        if (node.frontmatter.date.includes("2020"))
+        if (node.frontmatter.date.includes("2020")) {
           return <CardEvent key={key}>{node}</CardEvent>
+        }
+        return null //satisfy ESLint: Arrow FN must return a function
       })}
 
       <div className="cards-1">
@@ -45,8 +47,10 @@ export default function Events({ location, data }) {
       </div>
 
       {data.allMarkdownRemark.edges.map(({ node }, key) => {
-        if (node.frontmatter.date.includes("2019"))
+        if (node.frontmatter.date.includes("2019")) {
           return <CardEvent key={key}>{node}</CardEvent>
+        }
+        return null
       })}
     </Layout>
   )

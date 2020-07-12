@@ -27,7 +27,7 @@ export default function Navbar({ location }) {
           <li className="nav-item">
             <InternalLink
               className="nav-link page-scroll"
-              to="/#header"
+              to="/"
               location={location}
             >
               Home <span className="sr-only">(current)</span>
@@ -71,7 +71,7 @@ export default function Navbar({ location }) {
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle page-scroll"
-              href=""
+              href="#signup"
               id="navbarDropdown"
               role="button"
               aria-haspopup="true"
