@@ -1,6 +1,7 @@
 ---
 title: "Member Workshop: Software Design"
 date: "Mar 7 2020 12:00"
+location: "Benevity Offices"
 ---
 
 While we are a student-led initiative consisting of members with

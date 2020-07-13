@@ -1,6 +1,7 @@
 ---
 title: "Code the Change Club Info Night"
 date: "Jan 29 2020 18:00"
+location: "UofC ENE 134"
 img: "/images/_events/codethechangeyyc-infonight.png"
 ---
 

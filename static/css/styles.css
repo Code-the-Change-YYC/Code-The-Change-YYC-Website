@@ -2212,19 +2212,19 @@ a:hover.back-to-top {
 .card-event {
 	display: flex;
 	align-items: center;
-	min-height: 179px;
+	min-height: 200px;
 } 
 
-.card-event div .row{ 
+.monthday-date .row{ 
 	display:flex;
 	justify-content: center;
 	text-align: center;
 }
-.card-event div .row h4 {
+.monthday-date .row h4 {
 	line-height: 1em;
 	margin: 0;
 }
 
-.card-event div .row h2 {
+.monthday-date .row h2 {
 	line-height: 0.8em;
 }

@@ -57,7 +57,7 @@ export default function Events({ location, data }) {
 }
 
 export const query = graphql`
-  query {
+  query Events {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "updates" } } }
       sort: { fields: frontmatter___date, order: DESC }
@@ -69,6 +69,9 @@ export const query = graphql`
             title
             date
             img
+          }
+          fields {
+            slug
           }
         }
       }

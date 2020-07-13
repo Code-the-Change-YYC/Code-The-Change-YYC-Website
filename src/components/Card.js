@@ -21,11 +21,10 @@ export const Card = ({ children, href, src, alt }) => {
 }
 
 export const CardEvent = ({ children }) => {
-  const eventDate = new Date(children.frontmatter.date)
   return (
     <div className="container mb-4">
       <div className="row card-event">
-        <div className="col-lg-2">
+        <div className="col-md-2">
           <div className="img-container">
             {children.frontmatter.img ? (
               <img
@@ -38,21 +37,33 @@ export const CardEvent = ({ children }) => {
             )}
           </div>
         </div>
-        <div className="col-lg-6">
-          <h3>{children.frontmatter.title}</h3>
+        <div className="col-md-6">
+          <h3 className="mt-4">{children.frontmatter.title}</h3>
           <p>{children.excerpt}</p>
+          <a className="" href={children.fields.slug}>
+            Details
+          </a>
         </div>
-        <div className="col-lg-4">
-          <div className="row">
-            <h4 className="">{moment(eventDate).format("MMMM")}</h4>
-          </div>
-          <div className="row">
-            <h2 className="">{moment(eventDate).format("D")}</h2>
-          </div>
-          <div className="row">
-            <h4 className="">{moment(eventDate).format("hA")}</h4>
-          </div>
+        <div className="col-md-4">
+          <MonthDayDate date={children.frontmatter.date} />
         </div>
+      </div>
+    </div>
+  )
+}
+
+export const MonthDayDate = ({ date }) => {
+  const eventDate = new Date(date)
+  return (
+    <div className="monthday-date">
+      <div className="row">
+        <h4 className="">{moment(eventDate).format("MMMM")}</h4>
+      </div>
+      <div className="row">
+        <h2 className="">{moment(eventDate).format("D")}</h2>
+      </div>
+      <div className="row">
+        <h4 className="">{moment(eventDate).format("hA")}</h4>
       </div>
     </div>
   )

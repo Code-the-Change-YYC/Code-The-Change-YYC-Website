@@ -3,8 +3,8 @@ import Layout from "../components/layout"
 
 import { ContentLeft, ContentRight, ContentCenter } from "../components/Content"
 import { CardGroup, Card } from "../components/Card"
-import { CustomModal } from "../components/CustomModal"
-import MemberExec from "../components/MemberExec"
+import { ContentModal } from "../components/Content"
+import MemberExec from "../components/Member"
 
 export default function Home({ location }) {
   const [studModalOpen, setStudModalOpen] = useState(false)
@@ -163,7 +163,7 @@ export default function Home({ location }) {
         </p>
       </ContentLeft>
 
-      <CustomModal
+      <ContentModal
         isOpen={studModalOpen}
         onRequestClose={closeStudModal}
         img={
@@ -219,7 +219,7 @@ export default function Home({ location }) {
             </div>
           </li>
         </ul>
-      </CustomModal>
+      </ContentModal>
 
       <ContentRight
         id="causes"
@@ -262,7 +262,7 @@ export default function Home({ location }) {
         </p>
       </ContentRight>
 
-      <CustomModal
+      <ContentModal
         isOpen={causeModalOpen}
         onRequestClose={closeCauseModal}
         img={
@@ -312,7 +312,7 @@ export default function Home({ location }) {
             </div>
           </li>
         </ul>
-      </CustomModal>
+      </ContentModal>
 
       <ContentLeft
         id="mentors"
@@ -346,7 +346,7 @@ export default function Home({ location }) {
         </p>
       </ContentLeft>
 
-      <CustomModal
+      <ContentModal
         isOpen={mentorModalOpen}
         onRequestClose={closeMentorModal}
         img={
@@ -402,7 +402,7 @@ export default function Home({ location }) {
             <div className="media-body">Earn volunteer hours</div>
           </li>
         </ul>
-      </CustomModal>
+      </ContentModal>
 
       <ContentCenter id="information">
         <h2>More Information</h2>
@@ -412,7 +412,7 @@ export default function Home({ location }) {
         </p>
         <CardGroup>
           <div className="card">
-            <a href="events.html">
+            <a href="/events">
               <img
                 className="card-image"
                 src="images/_calendar2.svg"

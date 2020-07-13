@@ -1,6 +1,7 @@
 ---
 title: "Code The Change Calgary Kickoff + Hackathon"
 date: "Nov 9 2019 17:00"
+location: "Benevity Offices"
 img: "/images/_events/codethechangeyyc-kickoff.jpg"
 ---
 
