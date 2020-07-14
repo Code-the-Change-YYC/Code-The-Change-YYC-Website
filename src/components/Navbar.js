@@ -84,7 +84,7 @@ export default function Navbar({ location }) {
                 <span className="item-text">Member Registration</span>
               </a>
               <div className="dropdown-items-divide-hr"></div>
-              <a className="dropdown-item" href="causes.html">
+              <a className="dropdown-item" href="/causeRegistration">
                 <span className="item-text">Cause Registration</span>
               </a>
             </div>

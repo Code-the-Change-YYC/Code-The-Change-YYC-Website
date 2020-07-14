@@ -37,6 +37,7 @@ export const CardEvent = ({ children }) => {
             )}
           </div>
         </div>
+
         <div className="col-md-6">
           <h3 className="mt-4">{children.frontmatter.title}</h3>
           <p>{children.excerpt}</p>
@@ -44,6 +45,7 @@ export const CardEvent = ({ children }) => {
             Details
           </a>
         </div>
+
         <div className="col-md-4">
           <MonthDayDate date={children.frontmatter.date} />
         </div>

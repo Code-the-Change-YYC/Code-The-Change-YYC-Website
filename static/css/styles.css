@@ -27,6 +27,7 @@ Table Of Contents:
 18. Back To Top Button
 19. Extra Pages
 20. Media Queries
+21. Custom CSS - Code The Change YYC
 ******************************************/
 
 /*****************************************
@@ -2208,7 +2209,11 @@ a:hover.back-to-top {
 }
 /* end of min-width width 1200px */
 
-/* Start Non-Template default CSS */
+/*****************************/
+/*     21. Custom CSS     */
+/*      @cgarrovillo      */
+/*****************************/
+/* Event "card" found in /events */
 .card-event {
 	display: flex;
 	align-items: center;
@@ -2227,4 +2232,22 @@ a:hover.back-to-top {
 
 .monthday-date .row h2 {
 	line-height: 0.8em;
+}
+
+/* Media Queries */
+
+@media(max-width: 768px) {
+	.card-event {
+		margin: 1em;
+		padding: 0 0 2em 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.24)
+	}
+
+	.col-lg-12 hr {
+		display: none;
+	}
+
+	.cards-1 {
+		padding-bottom: 0;
+	}
 }
