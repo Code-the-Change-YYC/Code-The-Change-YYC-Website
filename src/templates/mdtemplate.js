@@ -8,7 +8,6 @@ import { ContentCenter } from "../components/Content"
 export default function MDTemplate({ location, data }) {
   const post = data.markdownRemark
   const date = new Date(post.frontmatter.date)
-  console.log(data.markdownRemark.htmlAst.children)
   return (
     <Layout location={location}>
       <header id="header" className="ex-header">
