@@ -80,7 +80,10 @@ export default function Navbar({ location }) {
               Sign Up
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item page-scroll" href="members.html">
+              <a
+                className="dropdown-item page-scroll"
+                href="/memberRegistration"
+              >
                 <span className="item-text">Member Registration</span>
               </a>
               <div className="dropdown-items-divide-hr"></div>

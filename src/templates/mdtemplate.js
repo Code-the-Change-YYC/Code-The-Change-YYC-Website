@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import moment from "moment"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import { ContentCenter } from "../components/Content"
@@ -10,6 +11,18 @@ export default function MDTemplate({ location, data }) {
   const date = new Date(post.frontmatter.date)
   return (
     <Layout location={location}>
+      <Helmet>
+        <script
+          id="EmbedSocialScript"
+          src="https://embedsocial.com/embedscript/ei.js"
+        />
+        <link
+          id="EmbedSocialLightboxCSS"
+          rel="stylesheet"
+          href="https://embedsocial.com/cdn/embedsocial_lightbox_style.min.css"
+        />
+      </Helmet>
+
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">
