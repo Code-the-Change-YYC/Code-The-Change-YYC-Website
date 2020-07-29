@@ -1,27 +1,18 @@
+require('dotenv').config()
+
 module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-prismic`,
       options: {
-        name: `updates`,
-        path: `${__dirname}/src/markdown/updates`,
+        repositoryName: `codethechangeyyc`,
+        accessToken: `${process.env.PRISMIC_API}`,
+        linkResolver: ({ node, key, value }) => (post) => `/${post.uid}`,
+        schemas: {
+          event: require('./src/schemas/event.json'),
+        },
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `updates`,
-        path: `${__dirname}/src/markdown/updates`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/src/markdown/projects`,
-      },
-    },
-    `gatsby-transformer-remark`,
   ],
 }

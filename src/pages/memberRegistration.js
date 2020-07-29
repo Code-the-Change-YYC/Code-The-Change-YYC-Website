@@ -1,9 +1,9 @@
-import React from "react"
-import Layout from "../components/layout"
+import React from 'react'
+import Layout from '../components/layout'
 
-export default function memberRegistration({ location }) {
+export default function memberRegistration() {
   return (
-    <Layout location={location}>
+    <Layout>
       <header id="header" class="ex-header">
         <div class="container">
           <div class="row">
@@ -50,7 +50,7 @@ export default function memberRegistration({ location }) {
 
               <div class="m-4">
                 <h4 class=" p-large">
-                  If you are interested in joining an internal admin role,{" "}
+                  If you are interested in joining an internal admin role,{' '}
                   <br />
                   please fill out the Admin Application Form.
                 </h4>

@@ -1,10 +1,10 @@
-import React from "react"
-import Layout from "../components/layout"
-import { ContentCenter } from "../components/Content"
+import React from 'react'
+import Layout from '../components/layout'
+import { ContentCenter } from '../components/Content'
 
-export default function success({ location }) {
+export default function success() {
   return (
-    <Layout location={location}>
+    <Layout>
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">

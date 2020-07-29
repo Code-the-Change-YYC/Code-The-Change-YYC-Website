@@ -1,8 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-
-import { withPrefix } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 // This file is to insert custom HTML into the <head>;
 // Needed for inserting our external CSS;

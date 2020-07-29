@@ -1,42 +1,20 @@
-import React, { useState } from "react"
-import Layout from "../components/layout"
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 
-import { ContentLeft, ContentRight, ContentCenter } from "../components/Content"
-import { CardGroup, Card } from "../components/Card"
-import { ContentModal } from "../components/Content"
-import MemberExec from "../components/Member"
+import { ContentLeft, ContentRight, ContentCenter } from '../components/Content'
+import { CardGroup, Card } from '../components/Card'
+import { ContentModal } from '../components/Content'
+import MemberExec from '../components/Member'
 
-export default function Home({ location }) {
+export default function Home({ data }) {
   const [studModalOpen, setStudModalOpen] = useState(false)
   const [causeModalOpen, setCauseModalOpen] = useState(false)
   const [mentorModalOpen, setMentorModalOpen] = useState(false)
 
-  function openStudModal() {
-    setStudModalOpen(true)
-  }
-
-  function closeStudModal() {
-    setStudModalOpen(false)
-  }
-
-  function openCauseModal() {
-    setCauseModalOpen(true)
-  }
-
-  function closeCauseModal() {
-    setCauseModalOpen(false)
-  }
-
-  function openMentorModal() {
-    setMentorModalOpen(true)
-  }
-
-  function closeMentorModal() {
-    setMentorModalOpen(false)
-  }
-
+  console.log(data)
   return (
-    <Layout location={location}>
+    <Layout>
       <header id="header" className="header">
         <div className="header-content">
           <div className="container">
@@ -99,8 +77,16 @@ export default function Home({ location }) {
         </div>
       </header>
 
-      <ContentCenter id="latest">
+      <ContentCenter
+        id="latest"
+        cta={
+          <a className="btn-solid-reg popup-with-move-anim m-4" href="/events">
+            Details
+          </a>
+        }
+      >
         <h2>Latest Updates</h2>
+        <h4>{data.prismicEvent.data.title.text}</h4>
       </ContentCenter>
 
       <ContentCenter id="schools">
@@ -140,7 +126,9 @@ export default function Home({ location }) {
         cta={
           <a
             className="btn-solid-reg popup-with-move-anim page-scroll"
-            onClick={openStudModal}
+            onClick={(e) => {
+              setStudModalOpen(!studModalOpen)
+            }}
             href="#students"
           >
             Details
@@ -165,7 +153,9 @@ export default function Home({ location }) {
 
       <ContentModal
         isOpen={studModalOpen}
-        onRequestClose={closeStudModal}
+        onRequestClose={(e) => {
+          setStudModalOpen(!studModalOpen)
+        }}
         img={
           <img
             className="img-fluid"
@@ -233,7 +223,9 @@ export default function Home({ location }) {
         cta={
           <a
             className="btn-solid-reg popup-with-move-anim page-scroll"
-            onClick={openCauseModal}
+            onClick={(e) => {
+              setCauseModalOpen(!causeModalOpen)
+            }}
             href="#causes"
           >
             Details
@@ -257,14 +249,16 @@ export default function Home({ location }) {
           work to move it along.
         </p>
         <p>
-          If you have a potential project, please complete a{" "}
+          If you have a potential project, please complete a{' '}
           <a href="causes.html">cause project submission</a>
         </p>
       </ContentRight>
 
       <ContentModal
         isOpen={causeModalOpen}
-        onRequestClose={closeCauseModal}
+        onRequestClose={(e) => {
+          setCauseModalOpen(!causeModalOpen)
+        }}
         img={
           <img
             className="img-fluid"
@@ -326,7 +320,9 @@ export default function Home({ location }) {
         cta={
           <a
             className="btn-solid-reg popup-with-move-anim page-scroll"
-            onClick={openMentorModal}
+            onClick={(e) => {
+              setMentorModalOpen(!mentorModalOpen)
+            }}
             href="#mentors"
           >
             Details
@@ -348,7 +344,9 @@ export default function Home({ location }) {
 
       <ContentModal
         isOpen={mentorModalOpen}
-        onRequestClose={closeMentorModal}
+        onRequestClose={(e) => {
+          setMentorModalOpen(!mentorModalOpen)
+        }}
         img={
           <img
             className="img-fluid"
@@ -561,3 +559,15 @@ export default function Home({ location }) {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query LatestUpdate {
+    prismicEvent {
+      data {
+        title {
+          text
+        }
+      }
+    }
+  }
+`

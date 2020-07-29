@@ -1,14 +1,20 @@
-import React from "react"
-import { graphql } from "gatsby"
-import moment from "moment"
-import { Helmet } from "react-helmet"
+import React from 'react'
+import { graphql } from 'gatsby'
+import moment from 'moment'
+import { Helmet } from 'react-helmet'
 
-import Layout from "../components/layout"
-import { ContentCenter } from "../components/Content"
+import Layout from '../components/layout'
+import { ContentCenter } from '../components/Content'
 
-export default function MDTemplate({ location, data }) {
-  const post = data.markdownRemark
-  const date = new Date(post.frontmatter.date)
+export default function EventTemplate({ location, data }) {
+  const event = data.prismicEvent.data
+  const title = event.title.text
+  const date = event.date
+  const eventLocation = event.location.text
+  const img = event.poster
+  const signupLink = event.signup_link.url
+  const details = event.details.text
+
   return (
     <Layout location={location}>
       <Helmet>
@@ -38,7 +44,7 @@ export default function MDTemplate({ location, data }) {
           <div className="col-sm-4"></div>
           <div className="col-sm-4">
             <div className="image-container mb-4">
-              <img src={post.frontmatter.img} alt="" className="img-fluid" />
+              <img src={img.url} alt={img.alt} className="img-fluid" />
             </div>
           </div>
           <div className="col-sm-4"></div>
@@ -46,30 +52,45 @@ export default function MDTemplate({ location, data }) {
 
         <div className="row my-5">
           <div className="col-6 border-right">
-            <h3>{moment(date).format("dddd, MMMM Do YYYY h:mma")}</h3>
+            <h3>{moment(date).format('dddd, MMMM Do YYYY h:mma')}</h3>
           </div>
           <div className="col-6 border-left">
-            <h3>{post.frontmatter.location}</h3>
+            <h3>{eventLocation}</h3>
           </div>
         </div>
 
-        <h2>{post.frontmatter.title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <h2>{title}</h2>
+        <div>
+          <p>{details}</p>
+          {signupLink ? <a href={signupLink}>Click here to sign up</a> : null}
+        </div>
       </ContentCenter>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      htmlAst
-      frontmatter {
-        title
+  query PrismicEvent {
+    prismicEvent {
+      uid
+      data {
+        title {
+          text
+        }
         date
-        location
-        img
+        location {
+          text
+        }
+        poster {
+          alt
+          url
+        }
+        signup_link {
+          url
+        }
+        details {
+          text
+        }
       }
     }
   }

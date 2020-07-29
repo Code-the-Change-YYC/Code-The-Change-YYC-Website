@@ -8,3 +8,5 @@ node_modules
 .cache
 public
 old
+
+.env*

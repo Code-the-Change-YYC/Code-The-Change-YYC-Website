@@ -1,20 +1,20 @@
-import React, { useState } from "react"
-import axios from "axios"
+import React, { useState } from 'react'
+import axios from 'axios'
 
-import Layout from "../components/layout"
+import Layout from '../components/layout'
 
-export default function CauseRegistration({ location }) {
+export default function CauseRegistration() {
   const [values, setValues] = useState({
-    orgName: "",
-    fullAddr: "",
-    contactName: "",
-    orgPhone: "",
-    orgEmail: "",
-    description: "",
-    outcome: "",
-    impact: "",
-    timeline: "",
-    budget: "",
+    orgName: '',
+    fullAddr: '',
+    contactName: '',
+    orgPhone: '',
+    orgEmail: '',
+    description: '',
+    outcome: '',
+    impact: '',
+    timeline: '',
+    budget: '',
   })
   const [formData, setFormData] = useState({})
 
@@ -26,24 +26,24 @@ export default function CauseRegistration({ location }) {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    setFormData({ ...formData, submit: "Submit" })
+    setFormData({ ...formData, submit: 'Submit' })
 
     //Construct form-urlencoded payload based on formData
     const payload = Object.entries(formData)
       .map(
         ([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`
       )
-      .join("&")
+      .join('&')
 
     //Request options for axios
     const options = {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
       },
       data: payload,
       url:
-        "https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0/formResponse",
+        'https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0/formResponse',
     }
 
     /*
@@ -53,11 +53,11 @@ export default function CauseRegistration({ location }) {
     Despite being a Simple Request, the response status code is still 0 due to CORS. Since there is no way
     to establish 0 or 200, .finally is used instead of .then or .catch
     */
-    axios(options).finally((window.location.href = "/success"))
+    axios(options).finally((window.location.href = '/success'))
   }
 
   return (
-    <Layout location={location}>
+    <Layout>
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">

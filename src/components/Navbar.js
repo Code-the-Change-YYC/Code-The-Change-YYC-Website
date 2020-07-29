@@ -1,7 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
-
-import { InternalLink } from "./InternalLink"
+import React from 'react'
+import { Link } from 'gatsby'
 
 export default function Navbar({ location }) {
   return (
@@ -25,25 +23,21 @@ export default function Navbar({ location }) {
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <InternalLink
-              className="nav-link page-scroll"
-              to="/"
-              location={location}
-            >
-              Home <span className="sr-only">(current)</span>
-            </InternalLink>
+            <Link className="nav-link page-scroll" to="/" location={location}>
+              Home
+            </Link>
           </li>
           <li className="nav-item">
-            <InternalLink
+            <Link
               className="nav-link page-scroll"
               to="/#students"
               location={location}
             >
               Who is it for?
-            </InternalLink>
+            </Link>
           </li>
           <li className="nav-item dropdown">
-            <InternalLink
+            <Link
               className="nav-link dropdown-toggle page-scroll"
               to="/#information"
               id="navbarDropdown"
@@ -53,7 +47,7 @@ export default function Navbar({ location }) {
               location={location}
             >
               Details
-            </InternalLink>
+            </Link>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <a className="dropdown-item" href="/events">
                 <span className="item-text">Events</span>
@@ -94,22 +88,22 @@ export default function Navbar({ location }) {
           </li>
 
           <li className="nav-item">
-            <InternalLink
+            <Link
               className="nav-link page-scroll"
               to="/index#about"
               location={location}
             >
               About
-            </InternalLink>
+            </Link>
           </li>
           <li className="nav-item">
-            <InternalLink
+            <Link
               className="nav-link page-scroll"
               to="/index#contact"
               location={location}
             >
               Contact
-            </InternalLink>
+            </Link>
           </li>
         </ul>
       </div>

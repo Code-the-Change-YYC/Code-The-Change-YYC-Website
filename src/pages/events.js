@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import { CardEvent } from "../components/Card"
+import Layout from '../components/layout'
+import { CardEvent } from '../components/Card'
 
-export default function Events({ location, data }) {
+export default function Events({ data }) {
   return (
-    <Layout location={location}>
+    <Layout>
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">
@@ -28,11 +28,11 @@ export default function Events({ location, data }) {
         </div>
       </div>
 
-      {data.allMarkdownRemark.edges.map(({ node }, key) => {
-        if (node.frontmatter.date.includes("2020")) {
+      {data.allPrismicEvent.edges.map(({ node }, key) => {
+        if (node.data.date.includes('2020')) {
           return <CardEvent key={key}>{node}</CardEvent>
         }
-        return null //satisfy ESLint: Arrow FN must return a function
+        return null
       })}
 
       <div className="cards-1">
@@ -46,8 +46,8 @@ export default function Events({ location, data }) {
         </div>
       </div>
 
-      {data.allMarkdownRemark.edges.map(({ node }, key) => {
-        if (node.frontmatter.date.includes("2019")) {
+      {data.allPrismicEvent.edges.map(({ node }, key) => {
+        if (node.data.date.includes('2019')) {
           return <CardEvent key={key}>{node}</CardEvent>
         }
         return null
@@ -57,21 +57,29 @@ export default function Events({ location, data }) {
 }
 
 export const query = graphql`
-  query Events {
-    allMarkdownRemark(
-      filter: { fields: { collection: { eq: "updates" } } }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
+  query PrismicAllEvents {
+    allPrismicEvent {
       edges {
         node {
-          excerpt
-          frontmatter {
-            title
+          uid
+          data {
+            title {
+              text
+            }
             date
-            img
-          }
-          fields {
-            slug
+            location {
+              text
+            }
+            signup_link {
+              url
+            }
+            details {
+              text
+            }
+            poster {
+              alt
+              url
+            }
           }
         }
       }

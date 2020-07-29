@@ -2220,6 +2220,11 @@ a:hover.back-to-top {
 	min-height: 200px;
 } 
 
+.card-event p{
+	text-overflow: ellipsis;
+	height: 50%;
+}
+
 .monthday-date .row{ 
 	display:flex;
 	justify-content: center;

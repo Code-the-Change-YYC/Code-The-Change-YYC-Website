@@ -1,72 +1,72 @@
-import React from "react"
-import Navbar from "./Navbar"
-import Footer from "./Footer"
+import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
-import { Helmet } from "react-helmet"
-import { withPrefix } from "gatsby"
+import { Helmet } from 'react-helmet'
+import { withPrefix } from 'gatsby'
 
-export default function Layout({ children, location }) {
+export default function Layout({ children }) {
   return (
     <>
       <Helmet>
         <script
           defer
-          src={withPrefix("/js/popper.min.js")}
+          src={withPrefix('/js/popper.min.js')}
           type="text/javascript"
         ></script>
         <script
           defer
-          src={withPrefix("/js/jquery.min.js")}
+          src={withPrefix('/js/jquery.min.js')}
           type="text/javascript"
         ></script>
         <script
           defer
-          src={withPrefix("/js/bootstrap.min.js")}
+          src={withPrefix('/js/bootstrap.min.js')}
           type="text/javascript"
         ></script>
         <script
           defer
-          src={withPrefix("/js/jquery.easing.min.js")}
+          src={withPrefix('/js/jquery.easing.min.js')}
           type="text/javascript"
         ></script>
         <script
           defer
-          src={withPrefix("js/swiper.min.js")}
+          src={withPrefix('js/swiper.min.js')}
           type="text/javascript"
         ></script>
         <script
           defer
-          src={withPrefix("/js/validator.min.js")}
+          src={withPrefix('/js/validator.min.js')}
           type="text/javascript"
         ></script>
         <script
           defer
-          src={withPrefix("/js/scripts.js")}
+          src={withPrefix('/js/scripts.js')}
           type="text/javascript"
         ></script>
 
         <link
-          href={withPrefix("/css/magnific-popup.css")}
+          href={withPrefix('/css/magnific-popup.css')}
           rel="stylesheet"
           type="text/css"
         />
         <link
-          href={withPrefix("css/bootstrap.css")}
+          href={withPrefix('css/bootstrap.css')}
           rel="stylesheet"
           type="text/css"
         />
         <link
-          href={withPrefix("/css/fontawesome-all.css")}
+          href={withPrefix('/css/fontawesome-all.css')}
           rel="stylesheet"
           type="text/css"
         />
         <link
-          href={withPrefix("/css/swiper.css")}
+          href={withPrefix('/css/swiper.css')}
           rel="stylesheet"
           type="text/css"
         />
         <link
-          href={withPrefix("/css/styles.css")}
+          href={withPrefix('/css/styles.css')}
           rel="stylesheet"
           type="text/css"
         />
@@ -75,7 +75,7 @@ export default function Layout({ children, location }) {
           rel="stylesheet"
         />
       </Helmet>
-      <Navbar location={location} />
+      <Navbar />
       {children}
       <Footer />
     </>
