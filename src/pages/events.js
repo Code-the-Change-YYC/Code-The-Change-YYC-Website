@@ -28,12 +28,12 @@ export default function Events({ data }) {
         </div>
       </div>
 
-      {data.allPrismicEvent.edges.map(({ node }, key) => {
+      {/* {data.allPrismicEvent.edges.map(({ node }, key) => {
         if (node.data.date.includes('2020')) {
           return <CardEvent key={key}>{node}</CardEvent>
         }
         return null
-      })}
+      })} */}
 
       <div className="cards-1">
         <div className="container">
@@ -46,43 +46,14 @@ export default function Events({ data }) {
         </div>
       </div>
 
-      {data.allPrismicEvent.edges.map(({ node }, key) => {
+      {/* {data.allPrismicEvent.edges.map(({ node }, key) => {
         if (node.data.date.includes('2019')) {
           return <CardEvent key={key}>{node}</CardEvent>
         }
         return null
-      })}
+      })} */}
     </Layout>
   )
 }
 
-export const query = graphql`
-  query PrismicAllEvents {
-    allPrismicEvent {
-      edges {
-        node {
-          uid
-          data {
-            title {
-              text
-            }
-            date
-            location {
-              text
-            }
-            signup_link {
-              url
-            }
-            details {
-              text
-            }
-            poster {
-              alt
-              url
-            }
-          }
-        }
-      }
-    }
-  }
-`
+export const query = graphql

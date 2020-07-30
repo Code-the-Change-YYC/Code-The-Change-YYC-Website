@@ -1,8 +1,10 @@
 import React from 'react'
-import Layout from '../components/layout'
-import { ContentLeft, ContentRight } from '../components/Content'
+import { graphql } from 'gatsby'
 
-export default function Projects() {
+import Layout from '../components/layout'
+import { ContentRight, ContentProject } from '../components/Content'
+
+export default function Projects({ data }) {
   return (
     <Layout>
       <header id="header" className="ex-header">
@@ -15,104 +17,36 @@ export default function Projects() {
         </div>
       </header>
 
-      <ContentLeft
-        id="yw"
-        img={
-          <img
-            className="card-img"
-            src="/images/_projects/_yw-alt.png"
-            alt=""
-          />
-        }
-      >
-        <h3 className="text-left">YW Calgary</h3>
-        <ul className="list-unstyled li-space-lg text-left">
-          <li>
-            <h4 className="m-1">Natural Language Processing</h4>
-            <ul className="pl-3 text-left">
-              <li>
-                Use machine learning to classify critical incident reports
-              </li>
-              <li>
-                Great opportunity for those interested in Machine Learning to
-                test their skills
-              </li>
-              <li>
-                Work with industry mentors with machine learning expertise
-              </li>
-            </ul>
-          </li>
-          <hr />
-          <li>
-            <h4 className="m-1">E-learning Storefront Project</h4>
-            <ul className="pl-3 text-left">
-              <li>
-                Creation and design of a storefront website with e-commerce
-                integrated
-              </li>
-              <li>
-                Build APIs to interface with companies' different E-Learning
-                platforms
-              </li>
-              <li>
-                Work with secure registration and authentication technologies
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </ContentLeft>
-
-      <ContentRight
-        id="amhac"
-        img={
-          <img
-            className="card-img"
-            src="/images/_projects/_amhac-placeholder-alt.png"
-            alt=""
-          />
-        }
-      >
-        <h3 className="text-left">Alberta Mental Health Advocacy Coalition</h3>
-        <ul className="list-unstyled li-space-lg text-left">
-          <li>
-            <h4 className="m-1">Website and Marketing design</h4>
-            <ul className="pl-3 text-left">
-              <li>Create and design the organization website and logo</li>
-              <li>Expand their online presence to reach more individuals</li>
-              <li>
-                Good project for members who are at the beginning of their
-                programming journey
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </ContentRight>
-
-      <ContentLeft
-        id="mindfuel"
-        img={
-          <img
-            className="card-img"
-            src="/images/_projects/_mindfuel-alt.png"
-            alt=""
-          />
-        }
-      >
-        <h3 className="text-left">Mindfuel</h3>
-        <ul className="list-unstyled li-space-lg text-left">
-          <li>
-            <h4 className="m-1">System Re-Design</h4>
-            <ul className="pl-3 text-left">
-              <li>
-                Build an activity board that contains new aggregated data
-                everyday
-              </li>
-              <li>Start from scratch or build on top of current system</li>
-              <li>Work with skilled developers from the Mindfuel team</li>
-            </ul>
-          </li>
-        </ul>
-      </ContentLeft>
+      {data.allContentfulProject.edges.map((node) => {
+        return <ContentProject key={node.node.slug}>{node}</ContentProject>
+      })}
     </Layout>
   )
 }
+
+export const query = graphql`
+  query PrismicProject {
+    allContentfulProject {
+      edges {
+        node {
+          developers
+          name
+          description {
+            description
+          }
+          leads
+          final
+          slug
+          summary
+          nonprofit
+          nonprofit_logo {
+            file {
+              url
+            }
+            description
+          }
+        }
+      }
+    }
+  }
+`

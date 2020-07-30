@@ -4,14 +4,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-prismic`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        repositoryName: `codethechangeyyc`,
-        accessToken: `${process.env.PRISMIC_API}`,
-        linkResolver: ({ node, key, value }) => (post) => `/${post.uid}`,
-        schemas: {
-          event: require('./src/schemas/event.json'),
-        },
+        spaceId: `${process.env.CONTENTFUL_SPACEID}`,
+        accessToken: `${process.env.CONTENTFUL_ACCESS}`,
       },
     },
   ],

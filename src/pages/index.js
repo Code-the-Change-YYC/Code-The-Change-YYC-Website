@@ -12,7 +12,6 @@ export default function Home({ data }) {
   const [causeModalOpen, setCauseModalOpen] = useState(false)
   const [mentorModalOpen, setMentorModalOpen] = useState(false)
 
-  console.log(data)
   return (
     <Layout>
       <header id="header" className="header">
@@ -86,7 +85,7 @@ export default function Home({ data }) {
         }
       >
         <h2>Latest Updates</h2>
-        <h4>{data.prismicEvent.data.title.text}</h4>
+        {/* <h4>{data.prismicEvent.data.title.text}</h4> */}
       </ContentCenter>
 
       <ContentCenter id="schools">
@@ -560,14 +559,4 @@ export default function Home({ data }) {
   )
 }
 
-export const query = graphql`
-  query LatestUpdate {
-    prismicEvent {
-      data {
-        title {
-          text
-        }
-      }
-    }
-  }
-`
+export const query = graphql
