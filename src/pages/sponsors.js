@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import { ContentCenter } from '../components/Content'
@@ -12,7 +12,6 @@ export default function SponsorsAndAdvisors({ data }) {
     ) || []
 
   const sponsorshipProposal = data.allContentfulAsset.edges[0].node
-  console.log(sponsorshipProposal)
   return (
     <Layout>
       <header id="header" className="ex-header">
@@ -46,6 +45,7 @@ export default function SponsorsAndAdvisors({ data }) {
                   />
                 }
                 key={edge.node.name}
+                href={edge.node.sponsorWebsite}
               >
                 <h4>{edge.node.name}</h4>
               </Card>
@@ -66,9 +66,9 @@ export default function SponsorsAndAdvisors({ data }) {
           Want to help shape the future of Code the Change YYC? Feel free to
           reach out to us and we'd love to discuss your involvement.
         </p>
-        <a className="btn-solid-lg page-scroll mx-1" href="index.html#contact">
+        <Link className="btn-solid-lg page-scroll mx-1" to="/#contact">
           Contact us
-        </a>
+        </Link>
         <a
           className="btn-solid-lg page-scroll mx-1"
           href={sponsorshipProposal.file.url}

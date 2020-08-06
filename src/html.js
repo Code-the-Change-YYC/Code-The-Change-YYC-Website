@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // This file is to insert custom HTML into the <head>;
-// Needed for inserting our external CSS;
+// Needed for adding a few properties to the <body> tag
 // Which is needed for the theme to work
 export default function HTML(props) {
   return (

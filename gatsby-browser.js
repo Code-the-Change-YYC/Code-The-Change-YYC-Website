@@ -1,0 +1,5 @@
+import './src/styles/magnific-popup.css'
+import './src/styles/bootstrap.css'
+import './src/styles/fontawesome-all.css'
+import './src/styles/swiper.css'
+import './src/styles/styles.css'

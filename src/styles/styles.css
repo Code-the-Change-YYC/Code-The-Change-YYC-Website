@@ -328,7 +328,7 @@ select {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  background-image: url('../images/down-arrow.png');
+  background-image: url('./images/down-arrow.png');
   background-position: 96% 50%;
   background-repeat: no-repeat;
   outline: none;
@@ -1317,7 +1317,7 @@ input[type='checkbox'] {
 .slider-2 {
   padding-top: 7.5rem;
   padding-bottom: 7rem;
-  background: url('../images/testimonials-background.jpg') center center
+  background: url('./images/testimonials-background.jpg') center center
     no-repeat;
   background-size: cover;
 }
@@ -1584,7 +1584,7 @@ a.back-to-top {
   width: 2.625rem;
   height: 2.625rem;
   border-radius: 1.875rem;
-  background: #00bfd8 url('../images/up-arrow.png') no-repeat center 47%;
+  background: #00bfd8 url('./images/up-arrow.png') no-repeat center 47%;
   background-size: 1.125rem 1.125rem;
   text-indent: -9999px;
 }
@@ -1892,7 +1892,7 @@ a:hover.back-to-top {
 
   /* Header */
   .header {
-    background: url('../images/_header-background.jpg') center center no-repeat;
+    background: url('./images/_header-background.jpg') center center no-repeat;
     background-size: cover;
   }
 
@@ -2018,7 +2018,7 @@ a:hover.back-to-top {
 
   /* Extra Pages */
   .ex-header {
-    background: url('../images/_ex-header-background.jpg') center center
+    background: url('./images/_ex-header-background.jpg') center center
       no-repeat;
     background-size: cover;
   }

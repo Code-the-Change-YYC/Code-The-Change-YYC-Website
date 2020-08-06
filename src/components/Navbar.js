@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export default function Navbar({ location }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <Link className="navbar-brand logo-image" to="/#header">
+      <AnchorLink className="navbar-brand logo-image" to="/#header">
         <img src="/images/_logo.png" alt="alternative" />
-      </Link>
+      </AnchorLink>
       <button
         className="navbar-toggler"
         type="button"
@@ -23,21 +24,25 @@ export default function Navbar({ location }) {
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link page-scroll" to="/" location={location}>
+            <AnchorLink
+              className="nav-link page-scroll"
+              to="/#header"
+              location={location}
+            >
               Home
-            </Link>
+            </AnchorLink>
           </li>
           <li className="nav-item">
-            <Link
+            <AnchorLink
               className="nav-link page-scroll"
               to="/#students"
               location={location}
             >
               Who is it for?
-            </Link>
+            </AnchorLink>
           </li>
           <li className="nav-item dropdown">
-            <Link
+            <AnchorLink
               className="nav-link dropdown-toggle page-scroll"
               to="/#information"
               id="navbarDropdown"
@@ -47,19 +52,19 @@ export default function Navbar({ location }) {
               location={location}
             >
               Details
-            </Link>
+            </AnchorLink>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="/events">
+              <Link className="dropdown-item" to="/events">
                 <span className="item-text">Events</span>
-              </a>
+              </Link>
               <div className="dropdown-items-divide-hr"></div>
-              <a className="dropdown-item" href="/projects">
+              <Link className="dropdown-item" to="/projects">
                 <span className="item-text">Projects</span>
-              </a>
+              </Link>
               <div className="dropdown-items-divide-hr"></div>
-              <a className="dropdown-item" href="/sponsors">
+              <Link className="dropdown-item" to="/sponsors">
                 <span className="item-text">Sponsors</span>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item dropdown">
@@ -74,36 +79,36 @@ export default function Navbar({ location }) {
               Sign Up
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a
+              <Link
                 className="dropdown-item page-scroll"
-                href="/memberRegistration"
+                to="/memberRegistration"
               >
                 <span className="item-text">Member Registration</span>
-              </a>
+              </Link>
               <div className="dropdown-items-divide-hr"></div>
-              <a className="dropdown-item" href="/causeRegistration">
+              <Link className="dropdown-item" to="/causeRegistration">
                 <span className="item-text">Cause Registration</span>
-              </a>
+              </Link>
             </div>
           </li>
 
           <li className="nav-item">
-            <Link
+            <AnchorLink
               className="nav-link page-scroll"
-              to="/index#about"
+              to="/#about"
               location={location}
             >
               About
-            </Link>
+            </AnchorLink>
           </li>
           <li className="nav-item">
-            <Link
+            <AnchorLink
               className="nav-link page-scroll"
-              to="/index#contact"
+              to="/#contact"
               location={location}
             >
               Contact
-            </Link>
+            </AnchorLink>
           </li>
         </ul>
       </div>

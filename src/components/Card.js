@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export const CardGroup = ({ children }) => {
   return (
@@ -10,9 +11,10 @@ export const CardGroup = ({ children }) => {
 }
 
 export const Card = ({ children, href, img }) => {
+  const redirect = href || '/'
   return (
     <div className="card">
-      <a className="page-scroll" href={href}>
+      <a className="page-scroll" href={redirect}>
         {img}
         {children}
       </a>

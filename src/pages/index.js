@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import { graphql, Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
+import Layout from '../components/layout'
 import { ContentLeft, ContentRight, ContentCenter } from '../components/Content'
 import { CardGroup, Card, CardExecMember } from '../components/Card'
 import { ContentModal } from '../components/Content'
@@ -37,33 +38,33 @@ export default function Home({ data }) {
                   <div className="row btn-group">
                     <div className="col-sm-auto p-0">
                       <div className="col p-0">
-                        <a
+                        <AnchorLink
                           className="btn-solid-lg page-scroll m-1"
-                          href="#students"
+                          to="/#students"
                         >
                           Students
-                        </a>
-                        <a
+                        </AnchorLink>
+                        <AnchorLink
                           className="btn-solid-lg page-scroll m-1"
-                          href="#causes"
+                          to="/#causes"
                         >
                           Causes
-                        </a>
+                        </AnchorLink>
                       </div>
                       <div className="w-100"></div>
                       <div className="col p-0">
-                        <a
+                        <AnchorLink
                           className="btn-solid-lg page-scroll m-1"
-                          href="#mentors"
+                          to="/#mentors"
                         >
                           Mentors
-                        </a>
-                        <a
+                        </AnchorLink>
+                        <AnchorLink
                           className="btn-solid-lg page-scroll m-1"
-                          href="#sponsors"
+                          to="/#sponsors"
                         >
                           Sponsors
-                        </a>
+                        </AnchorLink>
                       </div>
                     </div>
                   </div>
@@ -86,9 +87,9 @@ export default function Home({ data }) {
       <ContentCenter
         id="latest"
         cta={
-          <a className="btn-solid-reg popup-with-move-anim m-4" href="/events">
+          <Link className="btn-solid-reg popup-with-move-anim m-4" to="/events">
             Details
-          </a>
+          </Link>
         }
       >
         <h2>Latest Updates</h2>
@@ -106,7 +107,7 @@ export default function Home({ data }) {
         </p>
         <CardGroup>
           <Card
-            href="#about"
+            to="/#about"
             img={
               <img
                 className="card-image"
@@ -116,7 +117,7 @@ export default function Home({ data }) {
             }
           />
           <Card
-            href="#about"
+            to="/#about"
             img={
               <img
                 className="card-image"
@@ -126,7 +127,7 @@ export default function Home({ data }) {
             }
           />
           <Card
-            href="#about"
+            to="/#about"
             img={
               <img
                 className="card-image"
@@ -274,7 +275,7 @@ export default function Home({ data }) {
         </p>
         <p>
           If you have a potential project, please complete a{' '}
-          <a href="causes.html">cause project submission</a>
+          <Link to="/causeRegistration">cause project submission</Link>
         </p>
       </ContentRight>
 
@@ -434,7 +435,7 @@ export default function Home({ data }) {
         </p>
         <CardGroup>
           <div className="card">
-            <a href="/events">
+            <Link to="/events">
               <img
                 className="card-image"
                 src="images/_calendar2.svg"
@@ -443,11 +444,11 @@ export default function Home({ data }) {
               <div className="card-body">
                 <h4 className="card-title">Upcoming Events</h4>
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="card">
-            <a href="/projects">
+            <Link to="/projects">
               <img
                 className="card-image"
                 src="images/_projects3.svg"
@@ -456,11 +457,11 @@ export default function Home({ data }) {
               <div className="card-body">
                 <h4 className="card-title">Our Projects</h4>
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="card">
-            <a href="causes.html">
+            <Link to="/causeRegistration">
               <img
                 className="card-image"
                 src="images/_signup2.svg"
@@ -469,7 +470,7 @@ export default function Home({ data }) {
               <div className="card-body">
                 <h4 className="card-title">Cause Project Submission</h4>
               </div>
-            </a>
+            </Link>
           </div>
         </CardGroup>
       </ContentCenter>
@@ -509,9 +510,9 @@ export default function Home({ data }) {
           {sponsorCount > 2 ? (
             <p className="p-large">+ {sponsorCount - 2} more!</p>
           ) : null}
-          <a className="btn-solid-lg popup-with-move-anim m-4" href="/sponsors">
+          <Link className="btn-solid-lg m-4" to="/sponsors">
             Go to Sponsors page
-          </a>
+          </Link>
         </div>
       </ContentCenter>
 
@@ -524,11 +525,17 @@ export default function Home({ data }) {
             events and gatherings. Benevity as a corporate partner graciously
             provides their office space for club events and meetups.
             <br /> Reach out to us on our
-            <a href="https://www.facebook.com/CodeTheChangeYYC/">
+            <a
+              className="turquoise mx-1"
+              href="https://www.facebook.com/CodeTheChangeYYC/"
+            >
               Facebook page
             </a>
             or via email at
-            <a className="turquoise" href="mailto:codethechangeyyc@gmail.com">
+            <a
+              className="turquoise ml-1"
+              href="mailto:codethechangeyyc@gmail.com"
+            >
               codethechangeyyc@gmail.com
             </a>
             .
