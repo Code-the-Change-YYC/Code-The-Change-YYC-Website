@@ -871,6 +871,8 @@ input[type='checkbox'] {
   width: 17rem;
   height: 15rem;
   margin-bottom: 2em;
+
+  overflow: hidden;
 }
 
 .cards-1 .card-image {
@@ -878,6 +880,13 @@ input[type='checkbox'] {
   margin-right: auto;
   margin-bottom: 2rem;
   margin-left: auto;
+
+  /* overflow: hidden; */
+}
+
+.card-image img {
+  max-width: 100%;
+  /* overflow: hidden; */
 }
 
 .cards-1 .card-title {
@@ -1453,7 +1462,7 @@ input[type='checkbox'] {
 .form-2 {
   padding-top: 7rem;
   padding-bottom: 6.25rem;
-  background: url('../images/contact-background.jpg') center center no-repeat;
+  /* background: url('../images/contact-background.jpg') center center no-repeat; */
   background-size: cover;
 }
 

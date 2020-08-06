@@ -1,19 +1,19 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import moment from 'moment'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 import { ContentCenter } from '../components/Content'
 
 export default function EventTemplate({ location, data }) {
-  const event = data.prismicEvent.data
-  const title = event.title.text
-  const date = event.date
-  const eventLocation = event.location.text
-  const img = event.poster
-  const signupLink = event.signup_link.url
-  const details = event.details.text
+  const event = data.contentfulEvent || null
+  const title = event.name || 'DEFAULT'
+  const date = event.date || '1000-01-01T00:00'
+  const eventLocation = event.location || 'DEFAULT'
+  const img = event.eventPoster || ''
+  const signupLink = event.signupLink || ''
+  const details = event.details.details || ''
 
   return (
     <Layout location={location}>
@@ -44,7 +44,7 @@ export default function EventTemplate({ location, data }) {
           <div className="col-sm-4"></div>
           <div className="col-sm-4">
             <div className="image-container mb-4">
-              <img src={img.url} alt={img.alt} className="img-fluid" />
+              <img src={img.file.url} alt={img.title} className="img-fluid" />
             </div>
           </div>
           <div className="col-sm-4"></div>
@@ -70,28 +70,22 @@ export default function EventTemplate({ location, data }) {
 }
 
 export const query = graphql`
-  query PrismicEvent {
-    prismicEvent {
-      uid
-      data {
-        title {
-          text
-        }
-        date
-        location {
-          text
-        }
-        poster {
-          alt
-          url
-        }
-        signup_link {
-          url
-        }
-        details {
-          text
-        }
+  query Event {
+    contentfulEvent {
+      date
+      details {
+        details
       }
+      slug
+      name
+      signupLink
+      eventPoster {
+        file {
+          url
+        }
+        title
+      }
+      location
     }
   }
 `

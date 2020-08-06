@@ -3,14 +3,21 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 import { ContentLeft, ContentRight, ContentCenter } from '../components/Content'
-import { CardGroup, Card } from '../components/Card'
+import { CardGroup, Card, CardExecMember } from '../components/Card'
 import { ContentModal } from '../components/Content'
-import MemberExec from '../components/Member'
 
 export default function Home({ data }) {
   const [studModalOpen, setStudModalOpen] = useState(false)
   const [causeModalOpen, setCauseModalOpen] = useState(false)
   const [mentorModalOpen, setMentorModalOpen] = useState(false)
+
+  const latestUpdate = data.allContentfulEvent.edges[0].node || 'No updates!'
+  const sponsors = data.allContentfulSponsor.edges || []
+  const sponsorCount = data.allContentfulSponsor.totalCount || 0
+  const executives =
+    data.allContentfulAdminTeamMember.edges.filter(
+      (admin) => !admin.node.externalAdvisor
+    ) || []
 
   return (
     <Layout>
@@ -85,7 +92,10 @@ export default function Home({ data }) {
         }
       >
         <h2>Latest Updates</h2>
-        {/* <h4>{data.prismicEvent.data.title.text}</h4> */}
+        <div className="mx-auto w-50">
+          <h4>{latestUpdate.name}</h4>
+          <p className="p-large">{latestUpdate.details.details}</p>
+        </div>
       </ContentCenter>
 
       <ContentCenter id="schools">
@@ -97,18 +107,33 @@ export default function Home({ data }) {
         <CardGroup>
           <Card
             href="#about"
-            src="images/_uofc.png"
-            alt="University of Calgary"
+            img={
+              <img
+                className="card-image"
+                src="images/_uofc.png"
+                alt="University of Calgary"
+              />
+            }
           />
           <Card
             href="#about"
-            src="images/_mru.png"
-            alt="Mount Royal University"
+            img={
+              <img
+                className="card-image"
+                src="images/_mru.png"
+                alt="Mount Royal University"
+              />
+            }
           />
           <Card
             href="#about"
-            src="images/_sait.png"
-            alt="Southern Alberta Institute of Technology"
+            img={
+              <img
+                className="card-image"
+                src="images/_sait.png"
+                alt="Southern Alberta Institute of Technology"
+              />
+            }
           />
         </CardGroup>
       </ContentCenter>
@@ -459,69 +484,35 @@ export default function Home({ data }) {
         <h4>Student Executives</h4>
         <br />
 
-        <MemberExec
-          src="images/_team/_cole-colorcorrected.jpg"
-          href="https://www.linkedin.com/in/ckthiessen"
-        >
-          <p className="p-large">
-            <strong>Cole Thiessen</strong>
-          </p>
-          <p className="job-title">Co-President</p>
-        </MemberExec>
-
-        <MemberExec
-          src="images/_team/_ariba.jpg"
-          href="https://www.linkedin.com/in/aribaanees"
-        >
-          <p className="p-large">
-            <strong>Ariba Anees</strong>
-          </p>
-          <p className="job-title">Co-President</p>
-        </MemberExec>
-
-        <MemberExec
-          src="images/_team/_dustin-centered.jpg"
-          href="https://www.linkedin.com/in/dustin-king-30932a193"
-        >
-          <p className="p-large">
-            <strong>Dustin King</strong>
-          </p>
-          <p className="job-title">VP of Finance</p>
-        </MemberExec>
-
-        <MemberExec
-          src="images/_team/_cjpg.jpg"
-          href="https://www.linkedin.com/in/cgarrovillo"
-        >
-          <p className="p-large">
-            <strong>Christian Garrovillo</strong>
-          </p>
-          <p className="job-title">VP of Marketing</p>
-        </MemberExec>
-
-        <MemberExec
-          src="images/_team/_jj.jpg"
-          href="https://www.linkedin.com/in/jofred-cayabyab"
-        >
-          <p className="p-large">
-            <strong>JayJay Cayabyab</strong>
-          </p>
-          <p className="job-title">Tech Director</p>
-        </MemberExec>
-
-        <MemberExec
-          src="images/_team/_avneet.jpg"
-          href="https://www.linkedin.com/in/avneet-gill-223a87177"
-        >
-          <p className="p-large">
-            <strong>Avneet Gill</strong>
-          </p>
-          <p className="job-title">VP of Tech</p>
-        </MemberExec>
+        {executives.map((admin) => {
+          return <CardExecMember admin={admin.node} key={admin.node.fullName} />
+        })}
       </ContentCenter>
 
       <ContentCenter id="sponsors">
-        <h2>Sponsors</h2>
+        <h2 className="mb-5">Sponsors</h2>
+        {sponsors.map((sponsor) => {
+          return (
+            <Card
+              img={
+                <img
+                  className="card-image"
+                  src={sponsor.node.logoAsset.file.url}
+                  alt={sponsor.node.logoAsset.title}
+                />
+              }
+              key={sponsor.node.name}
+            ></Card>
+          )
+        })}
+        <div>
+          {sponsorCount > 2 ? (
+            <p className="p-large">+ {sponsorCount - 2} more!</p>
+          ) : null}
+          <a className="btn-solid-lg popup-with-move-anim m-4" href="/sponsors">
+            Go to Sponsors page
+          </a>
+        </div>
       </ContentCenter>
 
       <ContentCenter className="form-2" id="contact">
@@ -559,4 +550,50 @@ export default function Home({ data }) {
   )
 }
 
-export const query = graphql
+export const query = graphql`
+  query EventsSponsorsTeam {
+    allContentfulEvent(limit: 1) {
+      edges {
+        node {
+          date
+          name
+          details {
+            details
+          }
+        }
+      }
+    }
+    allContentfulSponsor(
+      sort: { fields: logoAsset___createdAt, order: ASC }
+      limit: 2
+    ) {
+      edges {
+        node {
+          name
+          logoAsset {
+            file {
+              url
+            }
+            title
+          }
+        }
+      }
+      totalCount
+    }
+    allContentfulAdminTeamMember(sort: { fields: createdAt, order: ASC }) {
+      edges {
+        node {
+          linkedIn
+          fullName
+          position
+          profilePicture {
+            file {
+              url
+            }
+          }
+          externalAdvisor
+        }
+      }
+    }
+  }
+`

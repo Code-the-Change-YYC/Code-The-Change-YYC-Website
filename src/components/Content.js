@@ -115,9 +115,9 @@ export const ContentProject = ({ children }) => {
   const summary = project.summary || []
   const description = project.description.description || 'Default'
   const developers = project.developers || []
-  const mentors = project.mentors || []
   const leads = project.leads || []
   const final_prod = project.final || ''
+  // const mentors = project.mentors || []
 
   const [isOpen, setIsOpen] = useState(false)
   return (

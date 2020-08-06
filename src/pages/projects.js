@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import { ContentRight, ContentProject } from '../components/Content'
+import { ContentProject } from '../components/Content'
 
 export default function Projects({ data }) {
   return (
