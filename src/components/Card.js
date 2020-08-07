@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import moment from 'moment'
-import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export const CardGroup = ({ children }) => {
   return (
@@ -40,7 +40,7 @@ export const CardEvent = ({ children }) => {
         <div className="col-md-6">
           <h3 className="mt-4">{title}</h3>
           <p>{details}</p>
-          <a href={`/events/${children.slug}`}>Details</a>
+          <Link to={`/events/${children.slug}`}>Details</Link>
         </div>
 
         <div className="col-md-4">

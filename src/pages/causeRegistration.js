@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-import Layout from '../components/layout'
-
 export default function CauseRegistration() {
   const [values, setValues] = useState({
     orgName: '',
@@ -57,7 +55,7 @@ export default function CauseRegistration() {
   }
 
   return (
-    <Layout>
+    <>
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">
@@ -238,6 +236,6 @@ export default function CauseRegistration() {
           </fieldset>
         </form>
       </div>
-    </Layout>
+    </>
   )
 }

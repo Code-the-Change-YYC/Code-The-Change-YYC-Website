@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
-import Layout from '../components/layout'
 import { ContentLeft, ContentRight, ContentCenter } from '../components/Content'
 import { CardGroup, Card, CardExecMember } from '../components/Card'
 import { ContentModal } from '../components/Content'
@@ -21,7 +20,7 @@ export default function Home({ data }) {
     ) || []
 
   return (
-    <Layout>
+    <>
       <header id="header" className="header">
         <div className="header-content">
           <div className="container">
@@ -553,7 +552,7 @@ export default function Home({ data }) {
           ></iframe>
         </div>
       </ContentCenter>
-    </Layout>
+    </>
   )
 }
 

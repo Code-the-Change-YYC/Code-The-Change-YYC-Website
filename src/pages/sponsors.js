@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/layout'
 import { ContentCenter } from '../components/Content'
 import { CardGroup, Card, CardExecMember } from '../components/Card'
 
@@ -13,7 +12,7 @@ export default function SponsorsAndAdvisors({ data }) {
 
   const sponsorshipProposal = data.allContentfulAsset.edges[0].node
   return (
-    <Layout>
+    <>
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">
@@ -76,7 +75,7 @@ export default function SponsorsAndAdvisors({ data }) {
           Sponsorship Proposal
         </a>
       </ContentCenter>
-    </Layout>
+    </>
   )
 }
 

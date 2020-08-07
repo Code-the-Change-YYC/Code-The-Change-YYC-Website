@@ -1,12 +1,12 @@
 {
   "name": "code-the-change-yyc",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Code The Change YYC Website Gatsby/React Migration. ",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "yarn run develop",
     "serve": "gatsby serve",

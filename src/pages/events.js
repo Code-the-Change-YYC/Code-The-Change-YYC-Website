@@ -1,12 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
 import { CardEvent } from '../components/Card'
 
 export default function Events({ data }) {
   return (
-    <Layout>
+    <>
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">
@@ -52,7 +51,7 @@ export default function Events({ data }) {
         }
         return null
       })}
-    </Layout>
+    </>
   )
 }
 

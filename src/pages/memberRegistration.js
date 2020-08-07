@@ -1,9 +1,8 @@
 import React from 'react'
-import Layout from '../components/layout'
 
 export default function memberRegistration() {
   return (
-    <Layout>
+    <>
       <header id="header" className="ex-header">
         <div className="container">
           <div className="row">
@@ -65,6 +64,6 @@ export default function memberRegistration() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
