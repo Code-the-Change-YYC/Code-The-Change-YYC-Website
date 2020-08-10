@@ -56,6 +56,11 @@ export default function Layout({ children }) {
           rel="stylesheet"
           href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
+
+        <title>
+          Code The Change YYC - Where Calgary's post-secondary Computer Science
+          + Engineering changemakers come to make an impact working with causes.
+        </title>
       </Helmet>
       <Navbar />
       {children}

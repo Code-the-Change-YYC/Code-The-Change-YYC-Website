@@ -3,10 +3,9 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import moment from 'moment'
 
-import Layout from '../components/layout'
 import { ContentCenter } from '../components/Content'
 
-export default function EventTemplate({ location, data }) {
+export default function EventTemplate({ data }) {
   const event = data.contentfulEvent || null
   const title = event.name || 'DEFAULT'
   const date = event.date || '1000-01-01T00:00'
@@ -16,7 +15,7 @@ export default function EventTemplate({ location, data }) {
   const details = event.details.details || ''
 
   return (
-    <Layout location={location}>
+    <>
       <Helmet>
         <script
           id="EmbedSocialScript"
@@ -65,7 +64,7 @@ export default function EventTemplate({ location, data }) {
           {signupLink ? <a href={signupLink}>Click here to sign up</a> : null}
         </div>
       </ContentCenter>
-    </Layout>
+    </>
   )
 }
 
