@@ -1404,22 +1404,43 @@ input[type='checkbox'] {
 }
 
 /* Hover Animation */
+/* WORKAROUND: On Webkit (Safari), there is a bug regarding scaling a Child positively
+while keeping the Parent's as is. The Child will fill the Parent component's minimum content space.
+In this case, Parent = .image-wrapper | Child = img 
+
+To work around it, scale(1) is applied to the parent component 
+*/
 .basic-4 .image-wrapper {
   overflow: hidden;
   margin-bottom: 1.5rem;
   border-radius: 50%;
+
+  transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
 }
 
 .basic-4 .image-wrapper img {
   margin: 0;
   transition: all 0.3s;
+
+  transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
 }
 
 .basic-4 .image-wrapper:hover img {
+  transform: scale(1.15);
   -moz-transform: scale(1.15);
   -webkit-transform: scale(1.15);
-  transform: scale(1.15);
 }
+
+.basic-4 .image-wrapper:hover {
+  transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
 /* end of hover animation */
 
 .basic-4 .team-member .p-large {

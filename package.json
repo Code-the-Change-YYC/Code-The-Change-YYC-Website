@@ -2,10 +2,10 @@
   "name": "code-the-change-yyc",
   "private": true,
   "description": "Code The Change YYC Website Gatsby/React Migration. ",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
     "develop": "gatsby clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "yarn run develop",
