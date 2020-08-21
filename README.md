@@ -1,6 +1,14 @@
-# website
+# Website
 
 Code for the Code the Change YYC website
+
+## Dev Environment
+
+There is currently a bug with NPM and Gatsby Plugins.
+A simple fix is to use Yarn instead of NPM.
+Make sure to use Yarn as the package manager rather than NPM, and to **never mix both**. If a **package-lock.json** exists in the project, NPM was used and this file must be deleted to avoid issues.
+
+The order that Gatsby Plugins are installed matters. So keep note of that.
 
 ## Deployment
 

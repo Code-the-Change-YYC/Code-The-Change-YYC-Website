@@ -12,3 +12,16 @@ exports.wrapPageElement = ({ element, props }) => {
   //(location, data, etc. ) -- no need to pass those.
   return <Layout {...props}>{element}</Layout>
 }
+
+const addScript = (url) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  document.body.appendChild(script)
+}
+
+exports.onClientEntry = () => {
+  window.onload = () => {
+    addScript('https://code.jquery.com/jquery-3.5.1.min.js')
+  }
+}
