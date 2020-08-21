@@ -1408,7 +1408,8 @@ input[type='checkbox'] {
 while keeping the Parent's as is. The Child will fill the Parent component's minimum content space.
 In this case, Parent = .image-wrapper | Child = img 
 
-To work around it, scale(1) is applied to the parent component 
+To work around it, scale(1) is applied to the Parent component, both in it's Regular
+state and it's :hover state.
 */
 .basic-4 .image-wrapper {
   overflow: hidden;
