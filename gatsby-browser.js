@@ -13,13 +13,15 @@ exports.wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>
 }
 
+// Browser only. Used in development due to React Helmet not being able to load <script>
+// tags in the order they are declared. (React Helmet issue, not me!)
+
 const addScript = (url) => {
   const script = document.createElement('script')
   script.src = url
   script.async = true
   document.body.appendChild(script)
 }
-
 exports.onClientEntry = () => {
   window.onload = () => {
     addScript('https://code.jquery.com/jquery-3.5.1.min.js')

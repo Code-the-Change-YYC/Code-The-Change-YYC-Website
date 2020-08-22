@@ -10,6 +10,6 @@ module.exports = {
         accessToken: `${process.env.CONTENTFUL_ACCESS}`,
       },
     },
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-remove-serviceworker',
   ],
 }

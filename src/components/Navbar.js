@@ -2,9 +2,17 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
-export default function Navbar({ location }) {
+import useScrollPosition from './Hooks/ScrollPos'
+
+export default function Navbar() {
+  const pos = useScrollPosition()
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <nav
+      className={`navbar navbar-expand-lg navbar-dark navbar-custom fixed-top ${
+        pos > 60 ? 'top-nav-collapse' : ''
+      }`}
+    >
       <AnchorLink className="navbar-brand logo-image" to="/#header">
         <img src="/images/_logo.png" alt="alternative" />
       </AnchorLink>
@@ -24,20 +32,12 @@ export default function Navbar({ location }) {
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <AnchorLink
-              className="nav-link page-scroll"
-              to="/#header"
-              location={location}
-            >
+            <AnchorLink className="nav-link page-scroll" to="/#header">
               Home
             </AnchorLink>
           </li>
           <li className="nav-item">
-            <AnchorLink
-              className="nav-link page-scroll"
-              to="/#students"
-              location={location}
-            >
+            <AnchorLink className="nav-link page-scroll" to="/#students">
               Who is it for?
             </AnchorLink>
           </li>
@@ -49,7 +49,6 @@ export default function Navbar({ location }) {
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
-              location={location}
             >
               Details
             </AnchorLink>
@@ -93,20 +92,12 @@ export default function Navbar({ location }) {
           </li>
 
           <li className="nav-item">
-            <AnchorLink
-              className="nav-link page-scroll"
-              to="/#about"
-              location={location}
-            >
+            <AnchorLink className="nav-link page-scroll" to="/#about">
               About
             </AnchorLink>
           </li>
           <li className="nav-item">
-            <AnchorLink
-              className="nav-link page-scroll"
-              to="/#contact"
-              location={location}
-            >
+            <AnchorLink className="nav-link page-scroll" to="/#contact">
               Contact
             </AnchorLink>
           </li>
