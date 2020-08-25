@@ -22,8 +22,3 @@ const addScript = (url) => {
   script.async = true
   document.body.appendChild(script)
 }
-exports.onClientEntry = () => {
-  window.onload = () => {
-    addScript('https://code.jquery.com/jquery-3.5.1.min.js')
-  }
-}

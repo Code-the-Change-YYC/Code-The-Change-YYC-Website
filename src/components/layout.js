@@ -13,42 +13,27 @@ export default function Layout({ children }) {
 
         {/* Third Party Libraries */}
         <script
-          async
-          defer
-          src="https://unpkg.com/@popperjs/core@2"
-          type="text/javascript"
-        ></script>
-        <script
-          async
-          defer
-          src="https://code.jquery.com/jquery-3.5.1.min.js"
-          integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-          crossOrigin="anonymous"
-        ></script>
-        <script
           defer
           src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-          integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
           crossOrigin="anonymous"
         ></script>
-        {/* <script
+        <script
           async
           defer
-          src={withPrefix('/js/scripts.js')}
-          type="text/javascript"
-        ></script> */}
+          src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          crossOrigin="anonymous"
+        ></script>
 
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&display=swap"
           rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/swiper/swiper-bundle.min.css"
+          media="all"
         />
 
+        <link href="https://maps.googleapis.com" rel="preconnect" />
         <link href="https://maps.gstatic.com" rel="preconnect" />
-        <link href="https://maps.gstatic.com" rel="dns-prefetch" />
+        <link href="https://www.googletagmanager.com" rel="preconnect" />
+        <link href="https://www.google-analytics.com" rel="preconnect" />
 
         {/* Metadata */}
         <title>
