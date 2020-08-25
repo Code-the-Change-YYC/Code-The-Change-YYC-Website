@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import useScrollPosition from './Hooks/ScrollPos'
+import useScrollPosition from './Hooks/ScrollPosition.js'
 
 export default function Navbar() {
   const pos = useScrollPosition()
@@ -13,9 +13,15 @@ export default function Navbar() {
         pos > 60 ? 'top-nav-collapse' : ''
       }`}
     >
-      <AnchorLink className="navbar-brand logo-image" to="/#header">
+      <AniLink
+        paintDrip
+        hex="#00bfd8"
+        duration={0.8}
+        className="navbar-brand logo-image"
+        to="/#header"
+      >
         <img src="/images/_logo.png" alt="alternative" />
-      </AnchorLink>
+      </AniLink>
       <button
         className="navbar-toggler"
         type="button"
@@ -53,17 +59,32 @@ export default function Navbar() {
               Details
             </AnchorLink>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link className="dropdown-item" to="/events">
+              <AniLink
+                fade
+                duration={0.3}
+                className="dropdown-item"
+                to="/events"
+              >
                 <span className="item-text">Events</span>
-              </Link>
+              </AniLink>
               <div className="dropdown-items-divide-hr"></div>
-              <Link className="dropdown-item" to="/projects">
+              <AniLink
+                fade
+                duration={0.3}
+                className="dropdown-item"
+                to="/projects"
+              >
                 <span className="item-text">Projects</span>
-              </Link>
+              </AniLink>
               <div className="dropdown-items-divide-hr"></div>
-              <Link className="dropdown-item" to="/sponsors">
+              <AniLink
+                fade
+                duration={0.3}
+                className="dropdown-item"
+                to="/sponsors"
+              >
                 <span className="item-text">Sponsors</span>
-              </Link>
+              </AniLink>
             </div>
           </li>
           <li className="nav-item dropdown">
@@ -78,21 +99,28 @@ export default function Navbar() {
               Sign Up
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link
+              <AniLink
+                fade
+                duration={0.3}
                 className="dropdown-item page-scroll"
                 to="/memberRegistration"
               >
                 <span className="item-text">Member Registration</span>
-              </Link>
+              </AniLink>
               <div className="dropdown-items-divide-hr"></div>
-              <Link className="dropdown-item" to="/causeRegistration">
+              <AniLink
+                fade
+                duration={0.3}
+                className="dropdown-item"
+                to="/causeRegistration"
+              >
                 <span className="item-text">Cause Registration</span>
-              </Link>
+              </AniLink>
             </div>
           </li>
 
           <li className="nav-item">
-            <AnchorLink className="nav-link page-scroll" to="/#about">
+            <AnchorLink className="nav-link" to="/#about">
               About
             </AnchorLink>
           </li>

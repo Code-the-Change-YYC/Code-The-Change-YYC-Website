@@ -31,7 +31,7 @@ export default function SponsorsAndAdvisors({ data }) {
         </p>
       </ContentCenter>
 
-      <ContentCenter>
+      <ContentCenter className="mb-0">
         <CardGroup>
           {data.allContentfulSponsor.edges.map((edge) => {
             return (
@@ -53,14 +53,14 @@ export default function SponsorsAndAdvisors({ data }) {
         </CardGroup>
       </ContentCenter>
 
-      <ContentCenter className="basic-4">
+      <ContentCenter className="basic-4 pb-0">
         <h2 className="mb-5">External Advisors</h2>
         {advisors.map((admin) => {
           return <CardExecMember admin={admin.node} key={admin.node.fullName} />
         })}
       </ContentCenter>
 
-      <ContentCenter className="mb-5">
+      <ContentCenter className="mb-5 pb-5">
         <p className="p-heading p-large mb-4">
           Want to help shape the future of Code the Change YYC? Feel free to
           reach out to us and we'd love to discuss your involvement.
@@ -101,8 +101,8 @@ export const query = graphql`
           fullName
           position
           profilePicture {
-            file {
-              url
+            fluid(quality: 100, maxWidth: 250) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           externalAdvisor

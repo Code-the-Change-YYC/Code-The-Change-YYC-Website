@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import moment from 'moment'
+import Img from 'gatsby-image'
 
 export const CardGroup = ({ children }) => {
   return (
@@ -14,7 +15,7 @@ export const Card = ({ children, href, img }) => {
   const redirect = href || '/'
   return (
     <div className="card">
-      <a className="page-scroll" href={redirect}>
+      <a href={redirect}>
         {img}
         {children}
       </a>
@@ -55,12 +56,12 @@ export const CardExecMember = ({ admin }) => {
   const fullName = admin.fullName || 'DEFAULT'
   const linkedIn = admin.linkedIn || 'DEFAULT'
   const position = admin.position || 'DEFAULT'
-  const img = admin.profilePicture.file.url || ''
+  const img = admin.profilePicture.fluid || ''
 
   return (
     <div className="team-member">
       <div className="image-wrapper">
-        <img className="img-fluid" src={img} alt={fullName} />
+        <Img className="img-fluid" fluid={img} alt={fullName} />
       </div>
       <p className="p-large">
         <strong>{fullName}</strong>
