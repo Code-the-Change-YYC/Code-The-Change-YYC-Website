@@ -1,42 +1,26 @@
-import { useRef, useLayoutEffect } from 'react'
-const isBrowser = typeof window !== `undefined`
+import { useState, useEffect } from 'react'
 
-function getScrollPosition({ element, useWindow }) {
-  if (!isBrowser) return { x: 0, y: 0 }
+export default () => {
+  const [scrollPosition, setScrollPosition] = useState(0)
 
-  const target = element ? element.current : document.body
-  const position = target.getBoundingClientRect()
+  useEffect(() => {
+    const setScollPositionCallback = () => setScrollPosition(window.scrollY)
 
-  return useWindow
-    ? { x: window.scrollX, y: window.scrollY }
-    : { x: position.left, y: position.top }
-}
-
-export function useScrollPosition(effect, deps, element, useWindow, wait) {
-  const position = useRef(getScrollPosition({ useWindow }))
-
-  let throttleTimeout = null
-
-  const callBack = () => {
-    const currPos = getScrollPosition({ element, useWindow })
-    effect({ prevPos: position.current, currPos })
-    position.current = currPos
-    throttleTimeout = null
-  }
-
-  useLayoutEffect(() => {
-    const handleScroll = () => {
-      if (wait) {
-        if (throttleTimeout === null) {
-          throttleTimeout = setTimeout(callBack, wait)
-        }
-      } else {
-        callBack()
-      }
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', setScollPositionCallback)
     }
 
-    window.addEventListener('scroll', handleScroll)
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('scroll', setScollPositionCallback)
+      }
+    }
+  }, [])
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, deps)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.scrollY !== 0) {
+      setScrollPosition(window.scrollY)
+    }
+  }, [])
+  return scrollPosition
 }

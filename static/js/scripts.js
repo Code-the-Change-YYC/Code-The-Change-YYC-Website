@@ -23,16 +23,12 @@
   Replaced by gatsby-anchor-links module.
   */
 
-  /* Navbar Scripts */
-  // jQuery to collapse the navbar on scroll
-
-  // $(window).on('scroll load', function () {
-  //   if ($('.navbar').offset().top > 60) {
-  //     $('.fixed-top').addClass('top-nav-collapse')
-  //   } else {
-  //     $('.fixed-top').removeClass('top-nav-collapse')
-  //   }
-  // })
+  /* 
+  Navbar collapse on scroll removed.
+  Reason: Old template code. Deprecated technologies. Not applicable when website
+  is now using ReactJS + Gatsby.
+  Replaced by custom ReactJS friendly code.
+  */
 
   /* 
   jQuery Easing Stuff removed.

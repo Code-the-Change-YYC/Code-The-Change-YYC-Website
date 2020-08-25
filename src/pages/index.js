@@ -106,7 +106,7 @@ export default function Home({ data }) {
         </p>
         <CardGroup>
           <Card
-            to="/#about"
+            href="/#about"
             img={
               <img
                 className="card-image"
@@ -116,7 +116,7 @@ export default function Home({ data }) {
             }
           />
           <Card
-            to="/#about"
+            href="/#about"
             img={
               <img
                 className="card-image"
@@ -126,7 +126,7 @@ export default function Home({ data }) {
             }
           />
           <Card
-            to="/#about"
+            href="/#about"
             img={
               <img
                 className="card-image"
@@ -593,8 +593,8 @@ export const query = graphql`
           fullName
           position
           profilePicture {
-            file {
-              url
+            fluid(quality: 100, maxWidth: 250) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           externalAdvisor
