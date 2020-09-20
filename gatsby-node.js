@@ -11,7 +11,21 @@ exports.createPages = async ({ graphql, actions }) => {
       allContentfulEvent {
         edges {
           node {
+            date
+            details {
+              details
+            }
             slug
+            name
+            signupLink
+            eventPoster {
+              file {
+                url
+              }
+              title
+            }
+            location
+            embedSocialRef
           }
         }
       }
@@ -27,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/events/${edge.node.slug}`,
       component: eventTemplate,
       context: {
-        slug: edge.node.slug,
+        data: edge.node,
       },
     })
   })

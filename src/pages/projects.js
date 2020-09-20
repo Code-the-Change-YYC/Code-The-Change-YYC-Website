@@ -24,7 +24,7 @@ export default function Projects({ data }) {
 }
 
 export const query = graphql`
-  query PrismicProject {
+  query {
     allContentfulProject {
       edges {
         node {

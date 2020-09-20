@@ -1,18 +1,18 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
 import moment from 'moment'
 
 import { ContentCenter } from '../components/Content'
 
-export default function EventTemplate({ data }) {
-  const event = data.contentfulEvent || null
+export default function EventTemplate({ pageContext }) {
+  const event = pageContext.data || null
   const title = event.name || 'DEFAULT'
   const date = event.date || '1000-01-01T00:00'
   const eventLocation = event.location || 'DEFAULT'
   const img = event.eventPoster || ''
   const signupLink = event.signupLink || ''
   const details = event.details.details || ''
+  const embedSocial = event.embedSocialRef || null
 
   return (
     <>
@@ -63,28 +63,11 @@ export default function EventTemplate({ data }) {
           <p>{details}</p>
           {signupLink ? <a href={signupLink}>Click here to sign up</a> : null}
         </div>
+
+        {embedSocial != null ? (
+          <div class="embedsocial-album" data-ref={embedSocial}></div>
+        ) : null}
       </ContentCenter>
     </>
   )
 }
-
-export const query = graphql`
-  query Event {
-    contentfulEvent {
-      date
-      details {
-        details
-      }
-      slug
-      name
-      signupLink
-      eventPoster {
-        file {
-          url
-        }
-        title
-      }
-      location
-    }
-  }
-`
