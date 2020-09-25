@@ -92,15 +92,15 @@ export default function Home({ data }) {
         }
       >
         <h2>Latest Updates</h2>
-        <div className="mx-auto w-50">
+        <div className="mx-auto">
           <h4>{latestUpdate.name}</h4>
-          <p className="p-large">{latestUpdate.details.details}</p>
+          <p className="p-heading p-large">{latestUpdate.details.details}</p>
         </div>
       </ContentCenter>
 
       <ContentCenter id="schools">
         <h2>Post-Secondary Representation</h2>
-        <p className="p-heading p-large">
+        <p className="p-large">
           We have student members, typically in Computer Science and Engineering
           programs, from the following post-secondary institutions in Calgary.
         </p>
