@@ -7,7 +7,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `${process.env.CONTENTFUL_SPACEID}`,
-        accessToken: `${process.env.CONTENTFUL_ACCESS}`,
+        accessToken: `${process.env.CONTENTFUL_ACCESS_LIVE}`,
       },
     },
     {
@@ -37,7 +37,7 @@ module.exports = {
         exclude: ['/preview/**', '/do-not-track/me/too/'],
         // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 500,
-        // Defers execution of google analytics script after page load
+        // Defers execution of google analytics script until after page load
         defer: false,
         // Any additional optional fields
         sampleRate: 100,
