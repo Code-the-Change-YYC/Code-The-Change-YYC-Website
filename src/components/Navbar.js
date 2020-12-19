@@ -2,7 +2,7 @@ import React from 'react'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import useScrollPosition from './Hooks/ScrollPosition.js'
+import useScrollPosition from '../Hooks/ScrollPosition.js'
 
 export default function Navbar() {
   const pos = useScrollPosition()
