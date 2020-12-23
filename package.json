@@ -14,9 +14,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@popperjs/core": "^2.6.0",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.22.15",
+    "gatsby": "^2.29.1",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-anchor-links": "^1.1.1",
     "gatsby-plugin-google-analytics": "^2.3.13",
@@ -24,18 +27,28 @@
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-sharp": "^2.6.27",
     "gatsby-plugin-transition-link": "^1.20.2",
-    "gatsby-source-contentful": "^2.3.33",
+    "gatsby-source-contentful": "^4.3.0",
     "gsap": "^3.5.0",
+    "jquery": "^3.5.1",
     "moment": "^2.27.0",
-    "react": "^16.12.0",
+    "popper.js": "^1.16.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
     "react-collapsible": "^2.8.0",
-    "react-dom": "^16.12.0",
+    "react-dom": "^17.0.1",
     "react-helmet": "^6.0.0",
     "react-modal": "^3.11.2"
   },
   "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "prettier": "2.0.5"
+    "prettier": "2.2.1"
   },
   "repository": {
     "type": "git",
