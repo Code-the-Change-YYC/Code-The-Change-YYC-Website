@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal } from 'react-modal'
+import Modal from 'react-modal'
 import PropTypes from 'prop-types'
 
 export default function ContentModal({ id, children, img, cta, isOpen, onRequestClose, ...rest }) {

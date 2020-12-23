@@ -2,9 +2,10 @@ import PropTypes from 'prop-types'
 
 import Modal from './Modal'
 
-export default function StudentsModal({ isOpen, onRequestClose, ...rest }) {
+export default function StudentsModal({ id, isOpen, onRequestClose, ...rest }) {
   return (
     <Modal
+      id={id}
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       img={<img className='img-fluid' src='images/_rockets.jpg' alt='alternative' />}
@@ -54,6 +55,7 @@ export default function StudentsModal({ isOpen, onRequestClose, ...rest }) {
 }
 
 StudentsModal.propTypes = {
+  id: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onRequestClose: PropTypes.func.isRequired,
 }

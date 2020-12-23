@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { Col, Container, Row } from 'react-bootstrap'
 import { graphql, Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import { CardGroup, Card, CardExecMember } from '../components/Card'
-
-import { Col, Container, Row } from 'react-bootstrap'
 
 export default function Home({ data }) {
   const [studModalOpen, setStudModalOpen] = useState(false)
@@ -40,7 +40,7 @@ export default function Home({ data }) {
                           Causes
                         </AnchorLink>
                       </div>
-                      <div className='w-100'></div>
+                      <div className='w-100' />
                       <div className='col p-0'>
                         <AnchorLink className='btn-solid-lg page-scroll m-1' to='/#mentors'>
                           Mentors
@@ -119,7 +119,8 @@ export default function Home({ data }) {
           <Col>
             <h2>For Students</h2>
             <p>
-              Calling all programmers, engineers and tinkerers! <br />
+              Calling all programmers, engineers and tinkerers!
+              <br />
               Do you want to excel your programming knowledge, learn new software skills, and gain
               amazing experiences to put on your resume while helping your community and
               contributing to social change?
@@ -132,7 +133,7 @@ export default function Home({ data }) {
             </p>
             <a
               className='btn-solid-reg popup-with-move-anim page-scroll'
-              onClick={e => {
+              onClick={() => {
                 setStudModalOpen(!studModalOpen)
               }}
               href='#students'>
@@ -170,12 +171,12 @@ export default function Home({ data }) {
               technical work to move it along.
             </p>
             <p>
-              If you have a potential project, please complete a{' '}
+              If you have a potential project, please complete a
               <Link to='/causeRegistration'>cause project submission</Link>
             </p>
             <a
               className='btn-solid-reg popup-with-move-anim page-scroll'
-              onClick={e => {
+              onClick={() => {
                 setCauseModalOpen(!causeModalOpen)
               }}
               href='#causes'>
@@ -195,12 +196,12 @@ export default function Home({ data }) {
             </p>
             <p>
               Code The Change will engage students in post secondary schools throughout Calgary to
-              assist causes in unlocking them to their full potential, while ensuring the students'
-              skillsets are getting developed and made more robust.
+              assist causes in unlocking them to their full potential, while ensuring the
+              students&apos; skillsets are getting developed and made more robust.
             </p>
             <a
               className='btn-solid-reg popup-with-move-anim page-scroll'
-              onClick={e => {
+              onClick={() => {
                 setMentorModalOpen(!mentorModalOpen)
               }}
               href='#mentors'>
@@ -220,7 +221,8 @@ export default function Home({ data }) {
           <Col>
             <h2>More Information</h2>
             <p className='p-heading p-large'>
-              Want to know more about upcoming events, projects, or cause registrations? <br />{' '}
+              Want to know more about upcoming events, projects, or cause registrations?
+              <br />
               Please select your option below!
             </p>
             <CardGroup>
@@ -260,7 +262,8 @@ export default function Home({ data }) {
           <Col>
             <h2>Team YYC</h2>
             <p className='p-heading p-large'>
-              This is the team responsible for bringing Code The Change to life in Calgary. <br />{' '}
+              This is the team responsible for bringing Code The Change to life in Calgary.
+              <br />
               To contact them directly, please reach out via LinkedIn.
             </p>
             <h4>Student Executives</h4>
@@ -286,7 +289,8 @@ export default function Home({ data }) {
                       alt={sponsor.node.logoAsset.title}
                     />
                   }
-                  key={sponsor.node.name}></Card>
+                  key={sponsor.node.name}
+                />
               )
             })}
             <div>
@@ -299,7 +303,7 @@ export default function Home({ data }) {
         </Row>
       </Container>
 
-      <Container className='cards-1'>
+      <Container className='cards-1 form-2'>
         <Row>
           <Col>
             <h2>Contact Information</h2>
@@ -321,8 +325,8 @@ export default function Home({ data }) {
               </li>
 
               <li>
-                <i className='fas fa-map-marker-alt'></i>611 Meredith Rd NE #700, Calgary, AB T2E
-                2W5, Canada
+                <i className='fas fa-map-marker-alt' />
+                611 Meredith Rd NE #700, Calgary, AB T2E 2W5, Canada
               </li>
             </ul>
           </Col>
@@ -376,3 +380,18 @@ export const query = graphql`
     }
   }
 `
+
+Home.propTypes = {
+  data: PropTypes.shape({
+    allContentfulEvent: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object),
+    }),
+    allContentfulSponsor: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(PropTypes.object),
+    }),
+    allContentfulAdminTeamMember: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object),
+    }),
+  }).isRequired,
+}

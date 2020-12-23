@@ -1,11 +1,11 @@
 const path = require('path')
 
-//Programmatically create new website pages
+//  Programmatically create new website pages
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   /* Events */
-  //GraphQL function call
+  //  GraphQL function call
   const pages = await graphql(`
     query ContentfulEventCreatePage {
       allContentfulEvent {
@@ -32,11 +32,11 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  //Path to the template to be used for an Event page
-  const eventTemplate = path.resolve('./src/templates/EventTemplate.js')
+  //  Path to the template to be used for an Event page
+  const eventTemplate = path.resolve('./src/templates/EventTemplate.jsx')
 
-  //Create a page using the template for each node from
-  pages.data.allContentfulEvent.edges.forEach((edge) => {
+  //  Create a page using the template for each node from
+  pages.data.allContentfulEvent.edges.forEach(edge => {
     createPage({
       path: `/events/${edge.node.slug}`,
       component: eventTemplate,

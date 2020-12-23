@@ -18,12 +18,19 @@
   },
   "plugins": ["react"],
   "rules": {
-    "semi": ["warn", "never"],
-    "jsx-quotes": ["error", "prefer-single"],
+    "react/prop-types": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-closing-bracket-location": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-wrap-multilines": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "semi": ["warn", "never"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "operator-linebreak": "off",
+    "arrow-parens": "off",
+    "arrow-body-style": "off"
   }
 }
