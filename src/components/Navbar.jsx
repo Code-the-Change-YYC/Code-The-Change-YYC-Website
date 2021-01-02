@@ -74,15 +74,11 @@ export default function Navbar() {
               Sign Up
             </a>
             <div className='dropdown-menu' aria-labelledby='navbarDropdown'>
-              <AniLink
-                fade
-                duration={0.3}
-                className='dropdown-item page-scroll'
-                to='/memberRegistration'>
+              <AniLink fade duration={0.3} className='dropdown-item page-scroll' to='/members'>
                 <span className='item-text'>Member Registration</span>
               </AniLink>
               <div className='dropdown-items-divide-hr' />
-              <AniLink fade duration={0.3} className='dropdown-item' to='/causeRegistration'>
+              <AniLink fade duration={0.3} className='dropdown-item' to='/causes'>
                 <span className='item-text'>Cause Registration</span>
               </AniLink>
             </div>
