@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function memberRegistration() {
+export default function members() {
   return (
     <>
       <header id='header' className='ex-header'>

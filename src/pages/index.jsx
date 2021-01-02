@@ -172,7 +172,7 @@ export default function Home({ data }) {
             </p>
             <p>
               If you have a potential project, please complete a
-              <Link to='/causeRegistration'>cause project submission</Link>
+              <Link to='/causes'>cause project submission</Link>
             </p>
             <a
               className='btn-solid-reg popup-with-move-anim page-scroll'
@@ -245,7 +245,7 @@ export default function Home({ data }) {
               </div>
 
               <div className='card'>
-                <Link to='/causeRegistration'>
+                <Link to='/causes'>
                   <img className='card-image' src='images/_signup2.svg' alt='alternative' />
                   <div className='card-body'>
                     <h4 className='card-title'>Cause Project Submission</h4>
