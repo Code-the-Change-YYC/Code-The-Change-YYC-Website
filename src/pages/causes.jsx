@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-export default function CauseRegistration() {
+export default function causes() {
   const [values, setValues] = useState({
     orgName: '',
     fullAddr: '',
