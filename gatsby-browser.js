@@ -3,6 +3,7 @@ require('@popperjs/core/dist/cjs/popper')
 require('bootstrap/dist/js/bootstrap')
 require('bootstrap/dist/css/bootstrap.css')
 require('@fortawesome/fontawesome-free/css/all.css')
+require('magnific-popup/dist/magnific-popup.css')
 require('./src/styles/styles.css')
 
 const React = require('react')
