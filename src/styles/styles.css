@@ -265,8 +265,7 @@ a.white {
 }
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active),
-  screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   .label-control {
     top: 0.9375rem;
   }
@@ -305,8 +304,7 @@ a.white {
 }
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active),
-  screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   .form-control-input {
     padding-top: 1.25rem;
     padding-bottom: 0.75rem;
@@ -375,8 +373,7 @@ input[type='checkbox'] {
 }
 
 /* IE10+ hack to raise checkbox field position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active),
-  screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   input[type='checkbox'] {
     vertical-align: -9%;
   }
@@ -776,27 +773,19 @@ input[type='checkbox'] {
   font-size: 2rem;
 }
 
-.navbar-custom
-  button[aria-expanded='false']
-  .navbar-toggler-awesome.fas.fa-times {
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times {
   display: none;
 }
 
-.navbar-custom
-  button[aria-expanded='false']
-  .navbar-toggler-awesome.fas.fa-bars {
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars {
   display: inline-block;
 }
 
-.navbar-custom
-  button[aria-expanded='true']
-  .navbar-toggler-awesome.fas.fa-bars {
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars {
   display: none;
 }
 
-.navbar-custom
-  button[aria-expanded='true']
-  .navbar-toggler-awesome.fas.fa-times {
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times {
   display: inline-block;
   margin-right: 0.125rem;
 }
@@ -1041,6 +1030,11 @@ input[type='checkbox'] {
   width: 2.75rem;
   height: 2.75rem;
   color: #707984;
+}
+
+/* React-Bootstrap Modal Override */
+.modal-content {
+  border: none;
 }
 
 /***********************/
@@ -1317,8 +1311,7 @@ input[type='checkbox'] {
 .slider-2 {
   padding-top: 7.5rem;
   padding-bottom: 7rem;
-  background: url('./images/testimonials-background.jpg') center center
-    no-repeat;
+  background: url('./images/testimonials-background.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -2040,8 +2033,7 @@ a:hover.back-to-top {
 
   /* Extra Pages */
   .ex-header {
-    background: url('./images/_ex-header-background.jpg') center center
-      no-repeat;
+    background: url('./images/_ex-header-background.jpg') center center no-repeat;
     background-size: cover;
   }
 

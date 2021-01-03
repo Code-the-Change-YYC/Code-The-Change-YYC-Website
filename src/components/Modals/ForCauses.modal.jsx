@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Modal from './Modal'
 
-export default function CausesModal({ id, isOpen, onRequestClose, ...rest }) {
+export default function CausesModal({ show, onHide, ...rest }) {
   return (
     <Modal
-      id={id}
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
+      show={show}
+      onHide={onHide}
       img={<img className='img-fluid' src='images/_causesVector.jpg' alt='alternative' />}
       cta={
         <a className='btn-solid-reg mfp-close page-scroll' href='/causes'>
@@ -48,7 +47,6 @@ export default function CausesModal({ id, isOpen, onRequestClose, ...rest }) {
 }
 
 CausesModal.propTypes = {
-  id: PropTypes.string.isRequired,
-  isOpen: PropTypes.bool.isRequired,
-  onRequestClose: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired,
+  onHide: PropTypes.func.isRequired,
 }

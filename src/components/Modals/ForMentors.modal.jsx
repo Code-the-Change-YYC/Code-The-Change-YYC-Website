@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Modal from './Modal'
 
-export default function StudentsModal({ id, isOpen, onRequestClose, ...rest }) {
+export default function StudentsModal({ show, onHide, ...rest }) {
   return (
     <Modal
-      id={id}
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
+      show={show}
+      onHide={onHide}
       img={<img className='img-fluid' src='images/_mentors.jpg' alt='alternative' />}
       cta={
         <a className='btn-solid-reg mfp-close page-scroll' href='/events'>
@@ -58,7 +57,6 @@ export default function StudentsModal({ id, isOpen, onRequestClose, ...rest }) {
 }
 
 StudentsModal.propTypes = {
-  id: PropTypes.string.isRequired,
-  isOpen: PropTypes.bool.isRequired,
-  onRequestClose: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired,
+  onHide: PropTypes.func.isRequired,
 }
