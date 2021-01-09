@@ -28,7 +28,7 @@ export default function Home({ data }) {
         <div className='header-content'>
           <Container>
             <Row>
-              <Col>
+              <Col lg>
                 <div className='text-container'>
                   <h1>
                     <span className='turquoise'>Code The Change </span>
@@ -58,7 +58,7 @@ export default function Home({ data }) {
                   </div>
                 </div>
               </Col>
-              <Col>
+              <Col lg>
                 <div className='image-container'>
                   <img className='img-fluid' src='images/_header.png' alt='alternative' />
                 </div>
@@ -68,7 +68,7 @@ export default function Home({ data }) {
         </div>
       </header>
 
-      <Container className='cards-1'>
+      {/* <Container className='cards-1'>
         <Row>
           <Col>
             <h2>Latest Updates</h2>
@@ -81,7 +81,7 @@ export default function Home({ data }) {
             </Link>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
 
       <Container className='cards-1'>
         <Row>
@@ -122,7 +122,7 @@ export default function Home({ data }) {
       <Container className='cards-1' id='students'>
         <div className='basic-1'>
           <Row>
-            <Col>
+            <Col lg>
               <div className='text-container'>
                 <h2>For Students</h2>
                 <p>
@@ -148,7 +148,7 @@ export default function Home({ data }) {
                 </a>
               </div>
             </Col>
-            <Col>
+            <Col lg>
               <div className='image-container'>
                 <img className='img-fluid' src='images/_students.svg' alt='alternative' />
               </div>
@@ -168,12 +168,12 @@ export default function Home({ data }) {
       <Container className='cards-1' id='causes'>
         <div className='basic-1'>
           <Row>
-            <Col>
+            <Col lg>
               <div className='image-container'>
                 <img className='img-fluid' src='images/_causes.svg' alt='alternative' />
               </div>
             </Col>
-            <Col>
+            <Col lg>
               <div className='text-container'>
                 <h2>For Causes</h2>
                 <p>
@@ -191,7 +191,9 @@ export default function Home({ data }) {
                 </p>
                 <p>
                   If you have a potential project, please complete a &nbsp;
-                  <Link to='/causes'>cause project submission</Link>
+                  <a href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+                    cause project submission
+                  </a>
                 </p>
                 <a
                   className='btn-solid-reg popup-with-move-anim page-scroll'
@@ -218,7 +220,7 @@ export default function Home({ data }) {
       <Container className='cards-1' id='mentors'>
         <div className='basic-1'>
           <Row>
-            <Col>
+            <Col lg>
               <div className='text-container'>
                 <h2>For Industry Mentors</h2>
                 <p>
@@ -240,7 +242,7 @@ export default function Home({ data }) {
                 </a>
               </div>
             </Col>
-            <Col>
+            <Col lg>
               <div className='image-container'>
                 <img className='img-fluid' src='images/_mentors.svg' alt='alternative' />
               </div>
@@ -278,12 +280,12 @@ export default function Home({ data }) {
               </div>
 
               <div className='card'>
-                <Link to='/causes'>
+                <a href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
                   <img className='card-image' src='images/_signup2.svg' alt='alternative' />
                   <div className='card-body'>
                     <h4 className='card-title'>Cause Project Submission</h4>
                   </div>
-                </Link>
+                </a>
               </div>
             </CardGroup>
           </Col>
