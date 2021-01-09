@@ -20,8 +20,8 @@ export default function members() {
               <div hidden>
                 <h2>Project intake has now closed.</h2>
                 <p className='p-heading p-large'>
-                  However, don't let this discourage you! We are still accepting applications in
-                  case a new project becomes available, or if an existing project requires more
+                  However, don&apos;t let this discourage you! We are still accepting applications
+                  in case a new project becomes available, or if an existing project requires more
                   members than expected.
                 </p>
               </div>

@@ -1,14 +1,18 @@
-require('./src/styles/magnific-popup.css')
-require('./src/styles/bootstrap.css')
-require('./src/styles/fontawesome-all.css')
+require('jquery/dist/jquery')
+require('@popperjs/core/dist/cjs/popper')
+require('bootstrap/dist/js/bootstrap')
+require('bootstrap/dist/css/bootstrap.css')
+require('@fortawesome/fontawesome-free/css/all.css')
+require('magnific-popup/dist/magnific-popup.css')
 require('./src/styles/styles.css')
 
 const React = require('react')
 const Layout = require('./src/components/layout').default
 
-//Wrap ALL pages with the Layout component (contains Navbar & Footer)
+//  Wrap ALL pages with the Layout component (contains Navbar & Footer)
 exports.wrapPageElement = ({ element, props }) => {
-  //props provide the same kind of data to Layout as a Page element does.
-  //(location, data, etc. ) -- no need to pass those.
+  //  props provide the same kind of data to Layout as a Page element does.
+  //  (location, data, etc. ) -- no need to pass those.
+  // eslint-disable-next-line react/jsx-filename-extension
   return <Layout {...props}>{element}</Layout>
 }

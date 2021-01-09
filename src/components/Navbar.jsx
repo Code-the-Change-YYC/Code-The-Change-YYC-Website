@@ -2,7 +2,7 @@ import React from 'react'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import useScrollPosition from './Hooks/ScrollPosition.js'
+import useScrollPosition from '../Hooks/ScrollPosition'
 
 export default function Navbar() {
   const pos = useScrollPosition()
@@ -28,8 +28,8 @@ export default function Navbar() {
         aria-controls='navbarsExampleDefault'
         aria-expanded='false'
         aria-label='Toggle navigation'>
-        <span className='navbar-toggler-awesome fas fa-bars'></span>
-        <span className='navbar-toggler-awesome fas fa-times'></span>
+        <span className='navbar-toggler-awesome fas fa-bars' />
+        <span className='navbar-toggler-awesome fas fa-times' />
       </button>
 
       <div className='collapse navbar-collapse' id='navbarsExampleDefault'>
@@ -48,8 +48,6 @@ export default function Navbar() {
             <AnchorLink
               className='nav-link dropdown-toggle page-scroll'
               to='/#information'
-              id='navbarDropdown'
-              role='button'
               aria-haspopup='true'
               aria-expanded='false'>
               Details
@@ -58,11 +56,11 @@ export default function Navbar() {
               <AniLink fade duration={0.3} className='dropdown-item' to='/events'>
                 <span className='item-text'>Events</span>
               </AniLink>
-              <div className='dropdown-items-divide-hr'></div>
+              <div className='dropdown-items-divide-hr' />
               <AniLink fade duration={0.3} className='dropdown-item' to='/projects'>
                 <span className='item-text'>Projects</span>
               </AniLink>
-              <div className='dropdown-items-divide-hr'></div>
+              <div className='dropdown-items-divide-hr' />
               <AniLink fade duration={0.3} className='dropdown-item' to='/sponsors'>
                 <span className='item-text'>Sponsors</span>
               </AniLink>
@@ -72,9 +70,6 @@ export default function Navbar() {
             <a
               className='nav-link dropdown-toggle page-scroll'
               href='#signup'
-              id='navbarDropdown'
-              role='button'
-              aria-haspopup='true'
               aria-expanded='false'>
               Sign Up
             </a>
@@ -82,10 +77,12 @@ export default function Navbar() {
               <AniLink fade duration={0.3} className='dropdown-item page-scroll' to='/members'>
                 <span className='item-text'>Member Registration</span>
               </AniLink>
-              <div className='dropdown-items-divide-hr'></div>
-              <AniLink fade duration={0.3} className='dropdown-item' to='/causes'>
+              <div className='dropdown-items-divide-hr' />
+              <a
+                className='dropdown-item'
+                href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
                 <span className='item-text'>Cause Registration</span>
-              </AniLink>
+              </a>
             </div>
           </li>
 
