@@ -78,7 +78,9 @@ export default function Navbar() {
                 <span className='item-text'>Member Registration</span>
               </AniLink>
               <div className='dropdown-items-divide-hr' />
-              <a className='dropdown-item' href=''>
+              <a
+                className='dropdown-item'
+                href='https://docs.google.com/forms/d/e/1FAIpQLSfOSVxP6L0dCUVeyWX1yI-jp1pYesaSpqz2-7i8z_JaiRu4YA/viewform?usp=sf_link'>
                 <span className='item-text'>Cause Registration</span>
               </a>
             </div>
