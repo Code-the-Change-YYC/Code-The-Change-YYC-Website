@@ -80,7 +80,7 @@ export default function Navbar() {
               <div className='dropdown-items-divide-hr' />
               <a
                 className='dropdown-item'
-                href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+                href='https://docs.google.com/forms/d/e/1FAIpQLSfOSVxP6L0dCUVeyWX1yI-jp1pYesaSpqz2-7i8z_JaiRu4YA/viewform?usp=sf_link'>
                 <span className='item-text'>Cause Registration</span>
               </a>
             </div>

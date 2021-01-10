@@ -191,7 +191,7 @@ export default function Home({ data }) {
                 </p>
                 <p>
                   If you have a potential project, please complete a &nbsp;
-                  <a href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+                  <a href='https://docs.google.com/forms/d/e/1FAIpQLSfOSVxP6L0dCUVeyWX1yI-jp1pYesaSpqz2-7i8z_JaiRu4YA/viewform?usp=sf_link'>
                     cause project submission
                   </a>
                 </p>
@@ -280,7 +280,7 @@ export default function Home({ data }) {
               </div>
 
               <div className='card'>
-                <a href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+                <a href='https://docs.google.com/forms/d/e/1FAIpQLSfOSVxP6L0dCUVeyWX1yI-jp1pYesaSpqz2-7i8z_JaiRu4YA/viewform?usp=sf_link'>
                   <img className='card-image' src='images/_signup2.svg' alt='alternative' />
                   <div className='card-body'>
                     <h4 className='card-title'>Cause Project Submission</h4>

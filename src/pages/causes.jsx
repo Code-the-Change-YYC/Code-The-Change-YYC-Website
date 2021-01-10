@@ -2,9 +2,7 @@ import React, { useEffect } from 'react'
 
 export default function causes() {
   useEffect(() => {
-    window.location.replace(
-      'https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'
-    )
+    window.location.replace('')
   }, [])
 
   return (
@@ -16,7 +14,7 @@ export default function causes() {
               <h1>Cause Registration</h1>
             </div>
             <span>
-              <a href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+              <a href='https://docs.google.com/forms/d/e/1FAIpQLSfOSVxP6L0dCUVeyWX1yI-jp1pYesaSpqz2-7i8z_JaiRu4YA/viewform?usp=sf_link'>
                 Cause Project Submission Form
               </a>
             </span>

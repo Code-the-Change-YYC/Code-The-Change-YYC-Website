@@ -11,7 +11,7 @@ export default function CausesModal({ show, onHide, ...rest }) {
       cta={
         <a
           className='btn-solid-reg mfp-close page-scroll'
-          href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+          href='https://docs.google.com/forms/d/e/1FAIpQLSfOSVxP6L0dCUVeyWX1yI-jp1pYesaSpqz2-7i8z_JaiRu4YA/viewform?usp=sf_link'>
           REGISTER
         </a>
       }
