@@ -9,9 +9,7 @@ export default function CausesModal({ show, onHide, ...rest }) {
       onHide={onHide}
       img={<img className='img-fluid' src='images/_causesVector.jpg' alt='alternative' />}
       cta={
-        <a
-          className='btn-solid-reg mfp-close page-scroll'
-          href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+        <a className='btn-solid-reg mfp-close page-scroll' href=''>
           REGISTER
         </a>
       }

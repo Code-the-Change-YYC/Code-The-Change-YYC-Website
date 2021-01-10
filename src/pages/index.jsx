@@ -191,9 +191,7 @@ export default function Home({ data }) {
                 </p>
                 <p>
                   If you have a potential project, please complete a &nbsp;
-                  <a href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
-                    cause project submission
-                  </a>
+                  <a href=''>cause project submission</a>
                 </p>
                 <a
                   className='btn-solid-reg popup-with-move-anim page-scroll'
@@ -280,7 +278,7 @@ export default function Home({ data }) {
               </div>
 
               <div className='card'>
-                <a href='https://docs.google.com/forms/d/1IaQkxGmZ3KJfYunL0Bmtj6pzr-UDhrhBF5wBM6_YTC0'>
+                <a href=''>
                   <img className='card-image' src='images/_signup2.svg' alt='alternative' />
                   <div className='card-body'>
                     <h4 className='card-title'>Cause Project Submission</h4>
