@@ -316,7 +316,7 @@ export default function Home({ data }) {
         </Row>
       </Container>
 
-      <Container className='cards-1'>
+      <Container className='cards-1' id='sponsors'>
         <Row>
           <Col>
             <h2 className='mb-5'>Sponsors</h2>
