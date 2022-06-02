@@ -404,7 +404,7 @@ export const query = graphql`
       }
       totalCount
     }
-    allContentfulAdminTeamMember(sort: { fields: createdAt, order: ASC }) {
+    allContentfulAdminTeamMember(sort: { fields: order, order: ASC }) {
       edges {
         node {
           linkedIn
