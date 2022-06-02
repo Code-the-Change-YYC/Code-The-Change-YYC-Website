@@ -15,7 +15,6 @@ export default function Home({ data }) {
   const [causeModalOpen, setCauseModalOpen] = useState(false)
   const [mentorModalOpen, setMentorModalOpen] = useState(false)
 
-  const latestUpdate = data.allContentfulEvent.edges[0].node || 'No updates!'
   const sponsors = data.allContentfulSponsor.edges || []
   const sponsorCount = data.allContentfulSponsor.totalCount || 0
   const executives =

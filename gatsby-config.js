@@ -2,9 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId: `${process.env.CONTENTFUL_SPACEID}`,
         accessToken: `${process.env.CONTENTFUL_ACCESS_LIVE}`,
@@ -23,7 +23,7 @@ module.exports = {
     },
     {
       // Google Analytics Script. MUST come AFTER the Tag Manager script.
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         // The property ID; the tracking code won't be generated without it
         trackingId: `${process.env.GA_TRACKING}`,
@@ -43,6 +43,18 @@ module.exports = {
         sampleRate: 100,
       },
     },
-    `gatsby-plugin-transition-link`,
+    'gatsby-plugin-transition-link',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Code the Change YYC',
+        short_name: 'CTC YYC',
+        start_url: '/',
+        background_color: '#f7fcfd',
+        theme_color: '#00bfd8',
+        display: 'standalone',
+        icon: 'static/images/_favicon.png'
+      },
+    },
   ],
 }

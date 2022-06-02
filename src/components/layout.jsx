@@ -25,12 +25,11 @@ export default function Layout({ children }) {
 
         {/* Metadata */}
         <title>
-          Code The Change YYC - Where Calgary&apos;s post-secondary Computer Science + Engineering
-          changemakers come to make an impact working with causes.
+          Code The Change YYC
         </title>
         <meta
           name='description'
-          content="Code the Change YYC - Where Calgary's post-secondary computer science and engineering changemakers come to make an impact working with causes."
+          content="Where Calgary's post-secondary computer science and engineering changemakers come to make an impact working with causes."
         />
 
         {/* SEO */}

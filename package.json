@@ -24,6 +24,7 @@
     "gatsby-plugin-anchor-links": "^1.1.1",
     "gatsby-plugin-google-analytics": "^2.3.13",
     "gatsby-plugin-google-tagmanager": "^2.3.11",
+    "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-sharp": "^2.6.27",
     "gatsby-plugin-transition-link": "^1.20.2",
