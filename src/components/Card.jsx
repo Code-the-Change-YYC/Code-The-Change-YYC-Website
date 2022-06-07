@@ -61,7 +61,7 @@ export const CardExecMember = ({ admin }) => {
   const fullName = admin.fullName || 'DEFAULT'
   const linkedIn = admin.linkedIn || 'DEFAULT'
   const position = admin.position || 'DEFAULT'
-  const img = admin.profilePicture.fluid || ''
+  const img = (admin.profilePicture && admin.profilePicture.fluid) || ''
 
   return (
     <div className='team-member'>

@@ -15,7 +15,6 @@ export default function Home({ data }) {
   const [causeModalOpen, setCauseModalOpen] = useState(false)
   const [mentorModalOpen, setMentorModalOpen] = useState(false)
 
-  const latestUpdate = data.allContentfulEvent.edges[0].node || 'No updates!'
   const sponsors = data.allContentfulSponsor.edges || []
   const sponsorCount = data.allContentfulSponsor.totalCount || 0
   const executives =
@@ -317,7 +316,7 @@ export default function Home({ data }) {
         </Row>
       </Container>
 
-      <Container className='cards-1'>
+      <Container className='cards-1' id='sponsors'>
         <Row>
           <Col>
             <h2 className='mb-5'>Sponsors</h2>
@@ -405,7 +404,7 @@ export const query = graphql`
       }
       totalCount
     }
-    allContentfulAdminTeamMember(sort: { fields: createdAt, order: ASC }) {
+    allContentfulAdminTeamMember(sort: { fields: order, order: ASC }) {
       edges {
         node {
           linkedIn
