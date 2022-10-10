@@ -1,3 +1,5 @@
+# NOTE: THIS WEBSITE IS DEPRECATED. THE NEW WEBSITE CAN BE FOUND [HERE](https://github.com/Code-the-Change-YYC/code-the-change-yyc-site).
+
 # Website
 
 Code for the Code the Change YYC website
